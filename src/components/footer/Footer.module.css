@@ -1,0 +1,134 @@
+/* Footer General Styling */
+.footerSection {
+    background: linear-gradient(135deg, #424141, #222121);
+    color: #fff;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-top: 5px solid #fff;
+  }
+  
+  .footerContent {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .contactInfo, .gallerySection, .newsletterSection {
+    flex: 1 1 30%;
+    margin: 10px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .contactInfo:hover, .gallerySection:hover, .newsletterSection:hover {
+    transform: translateY(-5px);
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  /* Contact Details Styling */
+  .contactInfo h2, .gallerySection h2, .newsletterSection h2 {
+    color: #fff;
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
+  
+  .contactInfo p {
+    color: #eee;
+    margin: 5px 0;
+  }
+  
+  .contactInfo a {
+    color: #00ffdd;
+    text-decoration: none;
+  }
+  
+  .contactInfo a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Gallery Styling */
+  .gallerySection h2 {
+    color: #fff;
+  }
+  
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    
+  }
+  
+  .gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    transition: transform 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .gallery img:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Newsletter Styling */
+  .newsletterSection h2 {
+    color: #fff;
+  }
+  
+  .newsletterSection p {
+    color: #eee;
+  }
+  
+  .newsletterForm {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .newsletterForm input[type="email"] {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .newsletterForm button {
+    padding: 12px 20px;
+    background-color: #00ffdd;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+  
+  .newsletterForm button:hover {
+    background-color: #009988;
+  }
+  
+  /* Footer Bottom */
+  .footerBottom {
+    margin-top: 5px;
+    text-align: center;
+    font-size: 14px;
+  }
+  
+  .footerBottom p {
+    color: #fff;
+  }
+  
+  /* Responsive */
+  @media screen and (max-width: 768px) {
+    .footerContent {
+      flex-direction: column;
+    }
+  }
+  

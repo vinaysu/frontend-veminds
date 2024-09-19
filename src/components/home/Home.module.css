@@ -1,0 +1,192 @@
+/* .carouselText {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: left;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+} */
+
+
+.customCarousel {
+  height: 88vh;
+  /* Set the height to 88vh accounting for the navbar */
+}
+
+.customCarouselInner {
+  height: 100%;
+  /* Ensure the inner content takes full height */
+}
+
+.customCarouselItem {
+  height: 100%;
+  /* Each carousel item takes the full height */
+}
+
+.customCarouselItem img {
+  height: 100%;
+  /* Ensure the image takes full height of the carousel */
+  width: 100%;
+  /* Ensure the image width is 100% of the container */
+  object-fit: cover;
+  /* Maintain the aspect ratio and fill the container */
+}
+
+.carouselText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  color: white;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Optional background for better readability */
+  padding: 20px;
+  border-radius: 10px;
+  /* width: 100%; */
+  pointer-events: none;
+  /* Prevent the text from interfering with carousel controls */
+  width: 50vw;
+  height: 35vh;
+}
+
+
+
+.leftTitleSection {
+  width: 60vw;
+  padding-left: 2em;
+  border: outset;
+  border-radius: 2em;
+}
+
+.caption {
+  font-size: 3.5em;
+}
+
+.titleSection {
+  background: linear-gradient(to bottom, #b8b4b4, #080808);
+  padding: 2em;
+  display: flex;
+  color: white;
+  gap: 1em;
+}
+
+.rightTitleSection img {
+  width: 35vw;
+  /* height: 80vh; */
+  height: auto;
+  border-radius: 1em;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
+  margin: 2em 0;
+}
+
+.button {
+  transition: transform 0.5s ease-in-out;
+  /* Smooth transition */
+  width: 30%;
+  height: 10vh;
+  background-color:#8F37ED ;
+}
+
+
+.button:hover {
+  transform: scale(1.3);
+  /* Increases size by 10% when hovered */
+}
+
+.courses {
+  display: flex;
+  /* justify-content: space-around; */
+  gap: 5em;
+  color: white;
+  font-weight: 800;
+  padding: 0.5em;
+}
+
+.textColorBlue {
+  color: #3be1e4;
+}
+
+.courses span {
+  display: inline-block;
+  padding: 0.5em;
+  font-weight: bold;
+  color: #fff;
+  background-color: #ec1313;
+  /* Highlight with a blue background */
+  border-radius: 5px;
+  animation: blink 1.5s infinite alternate;
+  /* Blinking effect */
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+    /* Normal size */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    /* Soft glow effect */
+  }
+
+  50% {
+    opacity: 0.5;
+    transform: scale(1.05);
+    /* Slightly enlarged */
+    box-shadow: 0 0 20px rgba(0, 123, 255, 0.8);
+    /* Stronger glow */
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    /* Back to normal size */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    /* Soft glow */
+  }
+}
+.snakeBorder {
+  position: relative;
+  display: inline-block;
+  padding: 5px;
+}
+
+.snakeBorder::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 5px solid transparent;
+  box-sizing: border-box;
+  border-image: linear-gradient(90deg, transparent, #33ff00, transparent) 1;
+  border-radius: 8px; /* Optional: Add rounded corners */
+  animation: snake 2s linear infinite;
+}
+
+@keyframes snake {
+  0% {
+      border-image-source: linear-gradient(90deg, transparent, #3be1e4, transparent, transparent);
+  }
+  25% {
+      border-image-source: linear-gradient(180deg, transparent, #3be1e4, transparent, transparent);
+  }
+  50% {
+      border-image-source: linear-gradient(270deg, transparent, #3be1e4, transparent, transparent);
+  }
+  75% {
+      border-image-source: linear-gradient(360deg, transparent, #3be1e4, transparent, transparent);
+  }
+  100% {
+      border-image-source: linear-gradient(450deg, transparent, #3be1e4, transparent, transparent);
+  }
+}
+

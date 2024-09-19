@@ -1,0 +1,70 @@
+.mainContainer {
+    background-color: #636161;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 5rem;
+    height: 12vh;
+    font-weight: 500;
+    border-bottom: 1px solid;
+}
+
+.logo {
+    height: 10vh;
+    cursor: pointer;
+    border-radius: 1em;
+    margin-right: 0.5em;
+    /* border-bottom-left-radius: 15em;
+    border-bottom-right-radius: 15em; */
+
+}
+
+.right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+}
+
+.joinNowNavbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+    background-color: #ec1313;
+    height: 12vh;
+    width: 14vw;
+    color: #F7FDFD;
+}
+
+.hvr:hover {
+    cursor: pointer;
+    color: #3be1e4;
+
+}
+
+
+
+.hvrj:hover {
+    cursor: pointer;
+    color: #3be1e4;
+
+}
+
+.link {
+    text-decoration: none;
+    /* color: rgb(58, 15, 15); */
+    color: white;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.title {
+    color: #3be1e4;
+}
+
+
