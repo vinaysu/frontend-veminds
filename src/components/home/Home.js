@@ -113,7 +113,7 @@ function Home() {
         </div>
         <div className={styles.rightTitleSection}>
           <div className={styles.snakeBorder}>
-            <img src='/images/navbar/Logo-Ve-Minds.jpg' alt="Logo" />
+            <img src='https://res.cloudinary.com/dkasinto0/image/upload/v1726806341/logo-Ve-Minds_bfc8ut.jpg' alt="Logo" />
           </div>
         </div>
 
