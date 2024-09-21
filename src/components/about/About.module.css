@@ -1,0 +1,84 @@
+.aboutContainer {
+    padding: 2rem;
+    background: linear-gradient(to bottom, #777879, #131212); /* Light blue to white gradient */
+    min-height: 100vh;
+  }
+  
+  
+  .title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #333;
+  }
+  
+  .mentorCards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: all 1s ease-in-out;
+  }
+  
+  .animateCards {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  .mentorCard {
+    background: linear-gradient(135deg, #9e9c9c, #5f5d5d); /* Light grey gradient */
+    border-radius: 10px;
+    padding: 20px;
+    width: 280px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: white;
+  }
+  
+  
+  .mentorCard:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  }
+  
+  .mentorImage {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+  }
+  
+  .socialIcons {
+    margin-top: 1rem;
+  }
+  
+  .socialIcons a {
+    margin: 0 10px;
+    color: #555;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+  }
+  
+  .socialIcons a:hover {
+    color: #0077b5; /* LinkedIn Blue */
+  }
+  
+  .socialIcons a:hover .fa-facebook {
+    color: #3b5998; /* Facebook Blue */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .mentorCards {
+      justify-content: center;
+    }
+  
+    .mentorCard {
+      width: 90%;
+      margin: 1rem 0;
+    }
+  }
+  
