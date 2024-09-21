@@ -1,6 +1,10 @@
 import React from 'react';
 import styles from './Home.module.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { TextField, InputAdornment, Avatar } from '@mui/material';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle'; // Icon for avatar
+import PhoneIcon from '@mui/icons-material/Phone'; // Icon for phone input
+
 
 function Home() {
   return (
@@ -102,8 +106,9 @@ function Home() {
             <span className={styles.textColorBlue} >Empowering</span>  your future with hands-on <span className={styles.textColorBlue}  >IT training </span>  and <span className={styles.textColorBlue}  > guaranteed job </span> opportunities.
           </h1>
           <div className={styles.courses}>
-            <span>Fullstack Development</span>
+            <span>MERN Stack Development</span>
             <span>Data Science</span>
+            <span>Data Analytics</span>
           </div>
           <div className={styles.buttons} >
             <button className={` btn btn-primary ${styles.button}`} >Enroll Now</button>
@@ -113,7 +118,52 @@ function Home() {
         </div>
         <div className={styles.rightTitleSection}>
           <div className={styles.snakeBorder}>
-            <img src='https://res.cloudinary.com/dkasinto0/image/upload/v1726806341/logo-Ve-Minds_bfc8ut.jpg' alt="Logo" />
+            <div className={styles.startForFree} >
+              <div className={styles.top_startForFree} >
+                <h2>Start learning for FREE</h2>
+                <p>Lectures & Assignments curated by Top Tech Professionals</p>
+              </div>
+              <div className={styles.bottom_startForFree} >
+                {/* Name Input Field with Avatar Icon */}
+                <TextField
+                  className={styles.input_startForFree}
+                  label="Full Name"
+                  variant="outlined"
+                  placeholder='Enter the FullName'
+                  fullWidth
+                  InputProps={{
+                    startAdornment: (
+                      <InputAdornment position="start">
+                        <Avatar>
+                          <AccountCircleIcon />
+                        </Avatar>
+                      </InputAdornment>
+                    ),
+                  }}
+                  style={{ marginBottom: '20px' }} // Optional: add spacing between fields
+                />
+
+                {/* Mobile Number Input Field with +91 Prefix */}
+                <TextField
+                  className={styles.input_startForFree}
+                  label="Mobile Number"
+                  variant="outlined"
+                  placeholder='Enter the WhatsApp Number'
+                  fullWidth
+                  InputProps={{
+                    startAdornment: (
+                      <InputAdornment position="start">
+                        +91
+                      </InputAdornment>
+                    ),
+                  }}
+                />
+                <div className={styles.buttonContainer_StartForFree} >
+                  <button className={` btn btn-light btn-lg w-100 ${styles.button_startForFree}`} >Start For Free</button>
+
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 

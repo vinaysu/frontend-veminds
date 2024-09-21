@@ -58,7 +58,7 @@
 
 .leftTitleSection {
   width: 60vw;
-  padding-left: 2em;
+  padding: 0 2em;
   border: outset;
   border-radius: 2em;
 }
@@ -93,7 +93,7 @@
   /* Smooth transition */
   width: 30%;
   height: 10vh;
-  background-color:#8F37ED ;
+  background-color: #8F37ED;
 }
 
 
@@ -104,7 +104,7 @@
 
 .courses {
   display: flex;
-  /* justify-content: space-around; */
+  justify-content: space-around;
   gap: 5em;
   color: white;
   font-weight: 800;
@@ -114,6 +114,7 @@
 .textColorBlue {
   color: #3be1e4;
 }
+
 
 .courses span {
   display: inline-block;
@@ -125,6 +126,9 @@
   border-radius: 5px;
   animation: blink 1.5s infinite alternate;
   /* Blinking effect */
+}
+.button_startForFree{
+  background-image: radial-gradient(rgb(134, 49, 49),rgb(29, 209, 185));
 }
 
 @keyframes blink {
@@ -152,10 +156,30 @@
     /* Soft glow */
   }
 }
+
 .snakeBorder {
   position: relative;
   display: inline-block;
   padding: 5px;
+  background-image: linear-gradient(to bottom, rgb(202, 193, 193), rgb(39, 27, 27));
+  /* background: transparent; */
+  padding: 1rem;
+  text-align: center;
+  height: 100%;
+  border-radius: 20px;
+}
+
+.top_startForFree {
+  margin: 1em 0;
+}
+
+.bottom_startForFree {
+  margin: 3em 0;
+
+}
+
+.buttonContainer_StartForFree {
+  margin-top: 4rem
 }
 
 .snakeBorder::before {
@@ -168,25 +192,29 @@
   border: 5px solid transparent;
   box-sizing: border-box;
   border-image: linear-gradient(90deg, transparent, #33ff00, transparent) 1;
-  border-radius: 8px; /* Optional: Add rounded corners */
+  border-radius: 8px;
+  /* Optional: Add rounded corners */
   animation: snake 2s linear infinite;
 }
 
 @keyframes snake {
   0% {
-      border-image-source: linear-gradient(90deg, transparent, #3be1e4, transparent, transparent);
+    border-image-source: linear-gradient(90deg, transparent, #3be1e4, transparent, transparent);
   }
+
   25% {
-      border-image-source: linear-gradient(180deg, transparent, #3be1e4, transparent, transparent);
+    border-image-source: linear-gradient(180deg, transparent, #3be1e4, transparent, transparent);
   }
+
   50% {
-      border-image-source: linear-gradient(270deg, transparent, #3be1e4, transparent, transparent);
+    border-image-source: linear-gradient(270deg, transparent, #3be1e4, transparent, transparent);
   }
+
   75% {
-      border-image-source: linear-gradient(360deg, transparent, #3be1e4, transparent, transparent);
+    border-image-source: linear-gradient(360deg, transparent, #3be1e4, transparent, transparent);
   }
+
   100% {
-      border-image-source: linear-gradient(450deg, transparent, #3be1e4, transparent, transparent);
+    border-image-source: linear-gradient(450deg, transparent, #3be1e4, transparent, transparent);
   }
 }
-
