@@ -65,7 +65,12 @@
     background-image: radial-gradient(rgb(134, 49, 49), rgb(29, 209, 185));
 }
 
+.bg_image {
+    /* background-image: url('https://images.unsplash.com/photo-1508615121316-fe792af62a63?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTh8fHxlbnwwfHx8fHw%3D');
+    background-size: cover; */
+    background-color: #d1d1c3;
 
+}
 
 .fullStack {
     display: flex;
@@ -88,4 +93,240 @@
 .text {
     color: rgb(189, 182, 182);
     font-size: 1em;
+}
+
+.title_mern {
+    color: red;
+}
+
+.payAfterPlacement,
+.access {
+    font-size: 20px;
+    margin: 0 50px;
+    padding: 10px;
+    /* Add padding for better appearance */
+    background-image: linear-gradient(to top right, #2a09e7, #ff5e00);
+    /* Gradient background */
+    -webkit-background-clip: text;
+    /* Clip background to text */
+    -webkit-text-fill-color: transparent;
+    /* Make the text color transparent to show the gradient */
+    display: inline-block;
+    /* Ensures the background and border wrap tightly around the text */
+    animation: blink 1s infinite;
+    /* Blink effect */
+    border: solid 1px rgb(205, 50, 159);
+    border-radius: 10px;
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+        /* Fully visible */
+    }
+
+    50% {
+        opacity: 0.5;
+        /* Half transparent */
+    }
+}
+
+
+.column_mern {
+    /* border: solid 1px red; */
+    padding: 20px;
+    width: 35vw;
+    background: transparent;
+}
+
+.topContainer {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    margin-right: 150px;
+}
+
+.columns_mern {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 2em;
+}
+
+.upArrow {
+    width: 100px;
+    font-weight: bolder;
+}
+
+.buttonAndArrow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.item_eligibility {
+    display: flex;
+    gap: 30px;
+}
+
+.column_mern {
+    /* border: solid 1px #ddd; */
+    padding: 20px;
+    width: 40vw;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* Adds space between the items */
+    align-items: flex-start;
+    /* Align items to the start */
+    background: transparent;
+}
+
+.item_eligibility {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.itemHeader {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* Space between the icon and the text */
+}
+
+.itemHeader span {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+h6 {
+    font-size: 16px;
+    margin-left: 30px;
+    /* Indent the description slightly for visual hierarchy */
+    font-weight: normal;
+    color: #555;
+    /* Optional, to soften the description text color */
+}
+
+/* Optional responsive adjustment */
+@media (max-width: 768px) {
+    .column_mern {
+        width: 100%;
+        padding: 10px;
+    }
+}
+
+.details_fullStack {
+    margin-top: 3rem;
+
+}
+
+.buttonAndArrow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: none;
+}
+
+.technologyList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.technology {
+    padding: 10px 15px;
+    border-radius: 5px;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    width: calc(50% - 10px);
+    /* Each item takes 50% width minus the gap */
+}
+
+/* Specific background colors for each technology */
+.technology:nth-child(1) {
+    background-color: #f0db4f;
+    /* JavaScript - Yellow */
+}
+
+.technology:nth-child(2) {
+    background-color: #61dbfb;
+    /* React.js - Blue */
+}
+
+.technology:nth-child(3) {
+    background-color: #68a063;
+    /* Node.js - Green */
+}
+
+.technology:nth-child(4) {
+    background-color: #4db33d;
+    /* MongoDB - Green */
+}
+
+.technology:nth-child(5) {
+    background-color: #000000;
+    /* Express.js - Black */
+    width: 100%;
+    /* Center the last item by giving it full width */
+    text-align: center;
+}
+
+/* Animation for the up arrow */
+.upArrow {
+    font-size: 50px;
+    animation: moveUp 1.5s infinite ease-in-out, blink 1s infinite;
+    color: #007bff;
+    margin-top: 0;
+    /* Negative margin to remove the space */
+    margin-bottom: -20px;
+}
+
+@keyframes moveUp {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+}
+
+/* Button styling */
+button {
+    margin-top: 0;
+    /* Ensure no space between the arrow and button */
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: bold;
 }
