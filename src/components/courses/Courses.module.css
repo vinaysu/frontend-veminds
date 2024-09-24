@@ -60,6 +60,9 @@
         border-image-source: linear-gradient(450deg, transparent, #3be1e4, transparent, transparent);
     }
 }
+.main_courseSection{
+    scroll-behavior: smooth;
+}
 
 .button_startForFree {
     background-image: radial-gradient(rgb(134, 49, 49), rgb(29, 209, 185));
@@ -225,8 +228,27 @@ h6 {
 }
 
 .details_fullStack {
-    margin-top: 3rem;
+    /* margin-top: 3rem; */
+    padding: 4rem 0;
+    background-image: radial-gradient(rgb(148, 93, 93), rgb(231, 217, 204));
 
+}
+
+.details_dataScience {
+    /* margin-top: 3rem; */
+    background-image: radial-gradient(rgb(173, 174, 177), rgb(50, 90, 105));
+    padding: 4rem 0;
+}
+
+.details_dataAnalysis {
+    /* margin-top: 3rem; */
+    padding: 4rem 0;
+    background-image: radial-gradient(rgb(201, 233, 18), rgb(50, 90, 105));
+}
+
+.upskill {
+
+    margin-bottom: 0px;
 }
 
 .buttonAndArrow {

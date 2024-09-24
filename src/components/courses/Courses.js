@@ -25,8 +25,8 @@ function Courses() {
             </p>
 
           </div>
-          <div className={styles.right_fullstack} >
-            <div className={styles.snakeBorder}>
+          <div id='startForFree' className={styles.right_fullstack} >
+            <div  className={styles.snakeBorder}>
               <div className={styles.startForFree} >
                 <div className={styles.top_startForFree} >
                   <h2>Start learning for FREE</h2>
@@ -112,6 +112,7 @@ function Courses() {
             </div>
 
             <div className={styles.buttonAndArrow}>
+              <p className={styles.upskill} >Up skill on the most in demand skills in the market</p>
               <div className={styles.technologyList}>
                 <span className={styles.technology}>JavaScript</span>
                 <span className={styles.technology}>React.js</span>
@@ -120,7 +121,7 @@ function Courses() {
                 <span className={styles.technology}>Express.js</span>
               </div>
               <KeyboardArrowUpIcon className={styles.upArrow}></KeyboardArrowUpIcon>
-              <button className="btn btn-primary btn-lg">Apply Now</button>
+              <a href='#startForFree' ><button className="btn btn-primary btn-lg">Apply Now</button> </a>
             </div>
 
             <div className={`${styles.column_mern}`}>
@@ -143,10 +144,140 @@ function Courses() {
             </div>
 
           </div>
+        </div>
+        <div className={styles.details_dataScience} >
+          <div className={`${styles.topContainer}`}>
+            <span className={`${styles.payAfterPlacement}`}>
+              Pay after Placement Available
+            </span>
+            <h1 className={styles.title_mern}>Data Science</h1>
+            <span className={`${styles.access}`}>
+              Life time Access
+            </span>
+          </div>
 
 
+          <div className={styles.columns_mern} >
+
+            <div className={`${styles.column_mern}`}>
+              <div className={styles.item_eligibility}>
+                <div className={styles.itemHeader}>
+                  <SchoolIcon />
+                  <span>Eligibility:</span>
+                </div>
+                <h6>All Degrees and Background eligible</h6>
+                <hr />
+              </div>
+
+              <div className={styles.item_eligibility}>
+                <div className={styles.itemHeader}>
+                  <AvTimerIcon />
+                  <span>Duration:</span>
+                </div>
+                <h6>6 Months</h6>
+              </div>
+            </div>
+
+            <div className={styles.buttonAndArrow}>
+              <p className={styles.upskill} >Up skill on the most in demand skills in the market</p>
+              <div className={styles.technologyList}>
+                <span className={styles.technology}>JavaScript</span>
+                <span className={styles.technology}>React.js</span>
+                <span className={styles.technology}>Node.js</span>
+                <span className={styles.technology}>MongoDB</span>
+                <span className={styles.technology}>Express.js</span>
+              </div>
+              <KeyboardArrowUpIcon className={styles.upArrow}></KeyboardArrowUpIcon>
+              <a href='#startForFree' ><button className="btn btn-primary btn-lg">Apply Now</button> </a>
+            </div>
+
+            <div className={`${styles.column_mern}`}>
+              <div className={styles.item_eligibility}>
+                <div className={styles.itemHeader}>
+                  <BusinessCenterIcon />
+                  <span>Selection Process:</span>
+                </div>
+                <h6>Basic Aptitude Test</h6>
+                <hr />
+              </div>
+
+              <div className={styles.item_eligibility}>
+                <div className={styles.itemHeader}>
+                  <HandshakeIcon />
+                  <span>Placement Services:</span>
+                </div>
+                <h6>Avail anytime within 1 year post course completion.</h6>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div className={styles.details_dataAnalysis} >
+          <div className={`${styles.topContainer}`}>
+            <span className={`${styles.payAfterPlacement}`}>
+              Pay after Placement Available
+            </span>
+            <h1 className={styles.title_mern}>Data Analysis</h1>
+            <span className={`${styles.access}`}>
+              Life time Access
+            </span>
+          </div>
 
 
+          <div className={styles.columns_mern} >
+
+            <div className={`${styles.column_mern}`}>
+              <div className={styles.item_eligibility}>
+                <div className={styles.itemHeader}>
+                  <SchoolIcon />
+                  <span>Eligibility:</span>
+                </div>
+                <h6>All Degrees and Background eligible</h6>
+                <hr />
+              </div>
+
+              <div className={styles.item_eligibility}>
+                <div className={styles.itemHeader}>
+                  <AvTimerIcon />
+                  <span>Duration:</span>
+                </div>
+                <h6>6 Months</h6>
+              </div>
+            </div>
+
+            <div className={styles.buttonAndArrow}>
+              <p className={styles.upskill} >Up skill on the most in demand skills in the market</p>
+              <div className={styles.technologyList}>
+                <span className={styles.technology}>JavaScript</span>
+                <span className={styles.technology}>React.js</span>
+                <span className={styles.technology}>Node.js</span>
+                <span className={styles.technology}>MongoDB</span>
+                <span className={styles.technology}>Express.js</span>
+              </div>
+              <KeyboardArrowUpIcon className={styles.upArrow}></KeyboardArrowUpIcon>
+              <a href='#startForFree' ><button className="btn btn-primary btn-lg">Apply Now</button> </a>
+            </div>
+
+            <div className={`${styles.column_mern}`}>
+              <div className={styles.item_eligibility}>
+                <div className={styles.itemHeader}>
+                  <BusinessCenterIcon />
+                  <span>Selection Process:</span>
+                </div>
+                <h6>Basic Aptitude Test</h6>
+                <hr />
+              </div>
+
+              <div className={styles.item_eligibility}>
+                <div className={styles.itemHeader}>
+                  <HandshakeIcon />
+                  <span>Placement Services:</span>
+                </div>
+                <h6>Avail anytime within 1 year post course completion.</h6>
+              </div>
+            </div>
+
+          </div>
         </div>
       </div>
     </div>
