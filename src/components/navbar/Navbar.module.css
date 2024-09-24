@@ -67,4 +67,47 @@
     color: #3be1e4;
 }
 
+.coursesLink {
+    position: relative;
+    /* So the dropdown is positioned relative to this */
+}
 
+.coursesDropdown {
+    position: absolute;
+    top: 100%;
+    /* Align just below the "Courses" link */
+    left: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    width: 20vw;
+    padding: 10px;
+    z-index: 100;
+    /* Make sure it's above other elements */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.coursesDropdown ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.coursesDropdown ul a {
+    color: #007bff; /* Bootstrap primary color */
+    text-decoration: none; /* Ensure no underline */
+}
+
+
+
+.coursesDropdown li {
+    
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.coursesDropdown li:hover {
+    background-color: #696666;
+    /* Add hover effect */
+    border-radius: 5px;
+}

@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import styles from './Courses.module.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { TextField, InputAdornment, Avatar } from '@mui/material';
@@ -12,6 +12,17 @@ import HandshakeIcon from '@mui/icons-material/Handshake';
 
 
 function Courses() {
+
+  useEffect(() => {
+    const hash = window.location.hash;
+    if (hash) {
+        const section = document.getElementById(hash.substring(1));
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+}, []);
+
   return (
     <div className={styles.main_courseSection} >
       <div className={styles.bg_image} >
@@ -26,7 +37,7 @@ function Courses() {
 
           </div>
           <div id='startForFree' className={styles.right_fullstack} >
-            <div  className={styles.snakeBorder}>
+            <div className={styles.snakeBorder}>
               <div className={styles.startForFree} >
                 <div className={styles.top_startForFree} >
                   <h2>Start learning for FREE</h2>
@@ -83,7 +94,7 @@ function Courses() {
             <span className={`${styles.payAfterPlacement}`}>
               Pay after Placement Available
             </span>
-            <h1 className={styles.title_mern}>MERN Full Stack</h1>
+            <h1 id='fullStack' className={styles.title_mern}>MERN Full Stack</h1>
             <span className={`${styles.access}`}>
               Life time Access
             </span>
@@ -150,7 +161,7 @@ function Courses() {
             <span className={`${styles.payAfterPlacement}`}>
               Pay after Placement Available
             </span>
-            <h1 className={styles.title_mern}>Data Science</h1>
+            <h1 id='dataScience' className={styles.title_mern}>Data Science</h1>
             <span className={`${styles.access}`}>
               Life time Access
             </span>
@@ -217,7 +228,7 @@ function Courses() {
             <span className={`${styles.payAfterPlacement}`}>
               Pay after Placement Available
             </span>
-            <h1 className={styles.title_mern}>Data Analysis</h1>
+            <h1 id='dataAnalysis' className={styles.title_mern}>Data Analysis</h1>
             <span className={`${styles.access}`}>
               Life time Access
             </span>
