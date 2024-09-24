@@ -1,4 +1,4 @@
-import React,{useEffect} from 'react'
+import React, { useEffect } from 'react'
 import styles from './Courses.module.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { TextField, InputAdornment, Avatar } from '@mui/material';
@@ -16,12 +16,12 @@ function Courses() {
   useEffect(() => {
     const hash = window.location.hash;
     if (hash) {
-        const section = document.getElementById(hash.substring(1));
-        if (section) {
-            section.scrollIntoView({ behavior: 'smooth' });
-        }
+      const section = document.getElementById(hash.substring(1));
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
     }
-}, []);
+  }, []);
 
   return (
     <div className={styles.main_courseSection} >

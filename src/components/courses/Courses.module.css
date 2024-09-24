@@ -60,7 +60,8 @@
         border-image-source: linear-gradient(450deg, transparent, #3be1e4, transparent, transparent);
     }
 }
-.main_courseSection{
+
+.main_courseSection {
     scroll-behavior: smooth;
 }
 
@@ -351,4 +352,101 @@ button {
     padding: 12px 30px;
     font-size: 16px;
     font-weight: bold;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .fullStack {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .caption {
+        font-size: 2.5em;
+    }
+
+    .text {
+        font-size: 0.9em;
+    }
+
+    .snakeBorder {
+        width: 80vw;
+    }
+
+    .columns_mern {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .column_mern {
+        width: 90%;
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .fullStack {
+        padding: 1rem;
+    }
+
+    .caption {
+        font-size: 2em;
+    }
+
+    .text {
+        font-size: 0.8em;
+    }
+
+    .topContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .payAfterPlacement,
+    .access {
+        font-size: 18px;
+        margin: 0;
+        padding: 5px;
+    }
+
+    .buttonAndArrow {
+        padding: 1rem;
+    }
+
+    .technology {
+        width: 100%;
+        text-align: center;
+    }
+
+    .upArrow {
+        width: 50px;
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .caption {
+        font-size: 1.5em;
+    }
+
+    .text {
+        font-size: 0.7em;
+    }
+
+    .input_startForFree {
+        margin-bottom: 10px;
+    }
+
+    .buttonContainer_StartForFree {
+        margin-top: 2rem;
+    }
+
+    .buttonAndArrow {
+        padding: 0.5rem;
+    }
+
+    .technology {
+        font-size: 12px;
+    }
 }
