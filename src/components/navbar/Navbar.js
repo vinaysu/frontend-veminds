@@ -21,7 +21,7 @@ function Navbar() {
                     <span className={styles.hvr}>Home</span>
                 </Link>
                 <Link className={styles.link} to={'/about'}>
-                    <span className={styles.hvr}>About</span>
+                    <span className={styles.hvr}>Build Resume</span>
                 </Link>
 
                 {/* Courses link with hover dropdown */}

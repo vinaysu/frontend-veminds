@@ -1,84 +1,266 @@
-.aboutContainer {
-    padding: 2rem;
-    background: linear-gradient(to bottom, #777879, #131212); /* Light blue to white gradient */
-    min-height: 100vh;
+.resumeContainer {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ec9191;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.topSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: #ccc8c8;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.topDetails {
+  flex: 1;
+  margin-right: 20px;
+}
+
+/* Align email and phone fields side by side */
+.contactDetails {
+  display: flex;
+  gap: 10px; /* Add space between the email and phone fields */
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contactDetails p {
+  width: 48%;
+}
+
+.topDetails h1,
+.topDetails p {
+  cursor: pointer;
+  text-align: left;
+  margin: 10px 0;
+
+
+}
+
+
+.topDetails input,
+.topDetails textarea {
+  padding: 6px;
+  width: 45%; 
+  margin-bottom: 10px;
+  border-radius: 4px;
+  border: 0px solid #ccc;
+  font-size: 14px;
+  /* border: 0px; */
+}
+
+.topDetails textarea {
+  height: 80px;
+}
+
+.address {
+  display: flex;
+  align-items: center;
+}
+
+.photoUpload {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer; /* Make it clickable */
+}
+
+.photoPlaceholder {
+  width: 150px;
+  height: 150px;
+  background-color: #e0e0e0;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  color: #666;
+  cursor: pointer;
+}
+
+.profilePhoto {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer; /* Make it clickable */
+}
+
+.uploadInput {
+  display: none; /* Hide the default file input */
+}
+
+.downloadBtn {
+  padding: 10px 20px;
+  border: none;
+  background-color: #4caf50;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  align-self: center;
+}
+
+.downloadBtn:hover {
+  background-color: #45a049;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .resumeContainer {
+    width: 90%;
   }
-  
-  
-  .title {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-    color: #333;
+
+  .topSection {
+    flex-direction: column;
+    align-items: flex-start;
   }
-  
-  .mentorCards {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    opacity: 0;
-    transform: translateX(-100%);
-    transition: all 1s ease-in-out;
+
+  .contactDetails {
+    flex-direction: column;
   }
-  
-  .animateCards {
-    opacity: 1;
-    transform: translateX(0);
+
+  .contactDetails p {
+    width: 100%;
   }
-  
-  .mentorCard {
-    background: linear-gradient(135deg, #9e9c9c, #5f5d5d); /* Light grey gradient */
-    border-radius: 10px;
-    padding: 20px;
-    width: 280px;
-    text-align: center;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    margin-bottom: 2rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    color: white;
+
+  .skillSection {
+    flex-direction: column;
   }
-  
-  
-  .mentorCard:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+
+  .leftColumn, .rightColumn {
+    width: 100%;
+    
   }
-  
-  .mentorImage {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-bottom: 1rem;
-  }
-  
-  .socialIcons {
-    margin-top: 1rem;
-  }
-  
-  .socialIcons a {
-    margin: 0 10px;
-    color: #555;
-    font-size: 1.2rem;
-    transition: color 0.3s ease;
-  }
-  
-  .socialIcons a:hover {
-    color: #0077b5; /* LinkedIn Blue */
-  }
-  
-  .socialIcons a:hover .fa-facebook {
-    color: #3b5998; /* Facebook Blue */
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .mentorCards {
-      justify-content: center;
-    }
-  
-    .mentorCard {
-      width: 90%;
-      margin: 1rem 0;
-    }
-  }
-  
+}
+
+/* Skill and education/project columns */
+.skillSection {
+  display: flex;
+  justify-content: space-between;
+}
+
+.leftColumn {
+  flex: 1;
+  margin-right: 20px;
+  background-color: #e2dbdb;
+  padding: 20px;
+}
+
+.rightColumn {
+  flex: 1;
+   padding: 20px;
+}
+
+.educationEntry, .projectEntry {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.educationEntry input, .projectEntry input, .projectEntry textarea {
+  margin-bottom: 5px;
+  border: 1px solid #ddd;
+}
+
+button {
+  background: transparent;
+  border: none;
+  color: blue;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.rightColumn {
+  flex: 1; /* Take equal space for the right column */
+  background-color: #f0ecec;
+}
+
+.skillEntry {
+  display: flex; /* Flexbox for individual skill entries */
+  flex-wrap: wrap; /* Allow skills to wrap into a new row */
+  gap: 10px; /* Space between skill inputs */
+}
+
+.skillEntry input {
+  width: calc(50% - 10px); /* Two skills per row */
+  box-sizing: border-box; /* Ensure padding and border are included in width */
+  margin-bottom: 10px; /* Space below each input */
+}
+
+/* General Input Styles */
+input, textarea {
+  background-color: transparent; /* Make all inputs transparent */
+  border: 1px solid #ccc; /* Add a light border for visibility */
+  color: #000; /* Set text color for better visibility */
+  padding: 6px; /* Maintain padding for input */
+  border-radius: 4px; /* Keep border-radius for rounded corners */
+}
+
+/* Specific styles for skill entry inputs, if needed */
+.skillEntry input {
+  width: calc(50% - 10px); /* Adjusted width for two columns */
+  box-sizing: border-box; /* Ensure padding and border are included in width */
+  margin-bottom: 10px; /* Space below each input */
+  margin-right: 10px; /* Space to the right for the second column */
+}
+
+.skillEntry input:nth-child(2n) {
+  margin-right: 0; /* Remove right margin for every second input */
+}
+
+/* Adjustments for address input specifically, if needed */
+.address input {
+  width: 100%; /* Address input can take full width */
+}
+
+.educationEntry {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.cgpaStreamContainer {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.courseInput {
+  flex: 1; /* Make the course input take up available space */
+  margin-bottom: 5px; /* Space between course and CGPA/Stream */
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.cgpaInput,
+.streamInput {
+  width: 100px; /* Set a fixed width for CGPA and Stream */
+  margin-right: 10px; /* Add space between CGPA and Stream */
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+
+
+
+
