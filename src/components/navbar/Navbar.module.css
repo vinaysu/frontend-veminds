@@ -111,3 +111,23 @@
     /* Add hover effect */
     border-radius: 5px;
 }
+
+.active {
+    position: relative; /* Positioning for the pseudo-element */
+    font-weight: bold; /* Bold text */
+  }
+  
+  .active::after {
+    content: ""; /* Pseudo-element content */
+    position: absolute;
+    left: 50%; /* Start from the center */
+    bottom: -4px; /* Adjust this value based on distance from the text */
+    transform: translateX(-50%); /* Center the underline */
+    width: 110%; /* Set the underline width to a percentage of the text width */
+    height: 3px; /* Set the thickness of the underline */
+    background-color: #3be1e4; /* Set underline color */
+    border-radius: 3px; /* Apply border radius to the underline */
+  }
+  
+  
+
