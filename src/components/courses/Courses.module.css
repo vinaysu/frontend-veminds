@@ -383,6 +383,12 @@ button {
         width: 90%;
         margin-bottom: 2rem;
     }
+    .right_fullstack{
+        margin: auto;
+    }
+    .topContainer{
+        margin: auto;
+    }
 }
 
 @media (max-width: 768px) {
@@ -423,6 +429,12 @@ button {
         width: 50px;
         font-size: 40px;
     }
+    .right_fullstack{
+        margin: auto;
+    }
+    .topContainer{
+        margin: auto;
+    }
 }
 
 @media (max-width: 480px) {
@@ -444,6 +456,12 @@ button {
 
     .buttonAndArrow {
         padding: 0.5rem;
+    }
+    .right_fullstack{
+        margin: auto;
+    }
+    .topContainer{
+        margin: auto;
     }
 
     .technology {

@@ -6,7 +6,7 @@
     padding-left: 5rem;
     height: 12vh;
     font-weight: 500;
-    border-bottom: 1px solid;
+    /* border-bottom: 1px solid; */
 }
 
 .logo {
@@ -75,6 +75,7 @@
     z-index: 100;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
+
 }
 
 .coursesDropdown ul {
@@ -151,6 +152,28 @@
     .joinNowNavbar {
         width: 100%;
     }
+
+    .mainContainer {
+        padding: 0 2rem;
+    }
+
+    .coursesDropdown {
+        width: 30vw;
+        /* Increase the dropdown width for smaller screens */
+        padding: 5px;
+        font-size: 0.9rem;
+        /* Slightly smaller font for mobile screens */
+    }
+
+    .coursesDropdown li {
+        padding: 8px 5px;
+        /* Adjust padding for smaller screens */
+    }
+
+    .coursesDropdown ul a {
+        font-size: 0.9rem;
+        /* Smaller font size for mobile view */
+    }
 }
 
 /* Hamburger Menu */
@@ -164,18 +187,24 @@
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 12vh;  /* Just below the navbar */
-    right: 2rem;  /* A little spacing from the right edge */
+    top: 12vh;
+    /* Just below the navbar */
+    right: 2rem;
+    /* A little spacing from the right edge */
     background-color: #636161;
-    width: 200px;  /* Set a specific width for the menu */
+    width: 200px;
+    /* Set a specific width for the menu */
     padding: 1em;
-    border-radius: 10px;  /* Optional: to make the menu look smoother */
+    border-radius: 10px;
+    /* Optional: to make the menu look smoother */
     z-index: 200;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);  /* Add a subtle shadow */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    /* Add a subtle shadow */
 }
 
 .joinNowNavbar {
-    width: 100%;  /* Full width of the menu container */
+    width: 100%;
+    /* Full width of the menu container */
 }
 
 @media (max-width: 768px) {
@@ -192,11 +221,13 @@
         flex-direction: column;
         position: absolute;
         top: 12vh;
-        right: 1rem;  /* Space from the right edge */
-        width: 200px;  /* Set specific width for the mobile menu */
+        right: 1rem;
+        /* Space from the right edge */
+        width: 200px;
+        /* Set specific width for the mobile menu */
         background-color: #636161;
         padding: 1em;
-        border-radius: 10px;  /* Rounded corners for a smoother look */
+        border-radius: 10px;
+        /* Rounded corners for a smoother look */
     }
 }
-

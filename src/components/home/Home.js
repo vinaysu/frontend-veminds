@@ -17,6 +17,18 @@ function Home() {
     }
   };
 
+  const companies = [
+    { id: 1, name: 'Company 1', img: 'https://via.placeholder.com/150x80?text=Company+1' },
+    { id: 2, name: 'Company 2', img: 'https://via.placeholder.com/150x80?text=Company+2' },
+    { id: 3, name: 'Company 3', img: 'https://via.placeholder.com/150x80?text=Company+3' },
+    { id: 4, name: 'Company 4', img: 'https://via.placeholder.com/150x80?text=Company+4' },
+    { id: 5, name: 'Company 5', img: 'https://via.placeholder.com/150x80?text=Company+5' },
+    { id: 6, name: 'Company 6', img: 'https://via.placeholder.com/150x80?text=Company+6' },
+    { id: 7, name: 'Company 7', img: 'https://via.placeholder.com/150x80?text=Company+7' },
+    { id: 8, name: 'Company 8', img: 'https://via.placeholder.com/150x80?text=Company+8' },
+  ];
+
+
   return (
     <div className={`${styles.home}`}>
       <div
@@ -186,6 +198,37 @@ function Home() {
               </div>
             </div>
           </div>
+        </div>
+      </div>
+      <div className={styles.companiesContainer}>
+        <div className={styles.bigText} >
+          <h1>Get the amazing offers from the top companies</h1>
+
+        </div>
+        {/* Row 1 - Scroll Left to Right */}
+        <div className={`${styles.companiesRow} ${styles.scrollLeftToRight}`}>
+          {companies.slice(0, 4).map((company) => (
+            <div key={company.id} className={styles.companyCard}>
+              <img src={company.img} alt={company.name} className={styles.companyLogo} />
+            </div>
+          ))}
+        </div>
+
+        {/* Row 2 - Scroll Right to Left */}
+        <div className={`${styles.companiesRow} ${styles.scrollRightToLeft}`}>
+          {companies.slice(4).map((company) => (
+            <div key={company.id} className={styles.companyCard}>
+              <img src={company.img} alt={company.name} className={styles.companyLogo} />
+            </div>
+          ))}
+        </div>
+        {/* Row 1 - Scroll Left to Right */}
+        <div className={`${styles.companiesRow} ${styles.scrollLeftToRight}`}>
+          {companies.slice(0, 4).map((company) => (
+            <div key={company.id} className={styles.companyCard}>
+              <img src={company.img} alt={company.name} className={styles.companyLogo} />
+            </div>
+          ))}
         </div>
       </div>
     </div>
