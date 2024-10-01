@@ -181,7 +181,7 @@ function Home() {
                   }}
                 />
                 <div className={styles.buttonContainer_StartForFree}>
-                  <button className={`btn btn-light btn-lg w-100 ${styles.button_startForFree}`}>Start For Free</button>
+                  <button className={`btn btn-light btn-lg w-100 ${styles.button_startForFree}`}>Apply Now For Free</button>
                 </div>
               </div>
             </div>
