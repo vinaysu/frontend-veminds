@@ -13,6 +13,7 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    text-align: center;
   }
   
   .contactInfo, .gallerySection, .newsletterSection {
@@ -116,7 +117,7 @@
   
   /* Footer Bottom */
   .footerBottom {
-    margin-top: 5px;
+    /* margin-top: 5px; */
     text-align: center;
     font-size: 14px;
   }
@@ -130,5 +131,10 @@
     .footerContent {
       flex-direction: column;
     }
+  }
+  .inline{
+    display: inline-block;
+    margin:  5rem;
+padding: 0 2rem;
   }
   

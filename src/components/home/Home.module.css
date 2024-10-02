@@ -95,15 +95,18 @@
 .button {
   transition: transform 0.5s ease-in-out;
   /* Smooth transition */
-  width: 25%;
+  width: 30%;
   height: 8vh;
-  background-color: #8F37ED;
+  background-color: #3be1e4;
+  color: black;
+  font-weight: 800;
 }
 
 
 .button:hover {
   transform: scale(1.2);
   /* Increases size by 10% when hovered */
+  background-color: rgb(243, 8, 204);
 }
 
 .courses {
@@ -356,6 +359,7 @@
   background-color: #f5f5f5;
   border-radius: 15px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin: 1rem;
 }
 
 /* Common row styling */
@@ -373,22 +377,23 @@
 
 /* Left to Right Scroll */
 .scrollLeftToRight {
-  animation: scrollLeftToRight 10s linear infinite;
+  animation: scrollLeftToRight 20s linear infinite;
 }
 
 /* Right to Left Scroll */
 .scrollRightToLeft {
-  animation: scrollRightToLeft 10s linear infinite;
+  animation: scrollRightToLeft 20s linear infinite;
 }
 
 /* Company card styling */
 .companyCard {
   display: inline-block;
-  padding: 1rem;
+  padding: 0.5rem;
   background-color: #ffffff;
   border-radius: 10px;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: solid 0.5em rgb(11, 238, 189);
 }
 
 .companyCard:hover {
@@ -431,7 +436,7 @@
 .companiesContainer {
   position: relative;
   /* height: 300px;  */
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
   padding: 10px;
 }
 
@@ -505,11 +510,55 @@
   /* Center the text */
   z-index: 0.5;
   /* Place it behind the scrolling content */
-  color: blue;
-  background-image: radial-gradient(rgb(0, 255, 85), rgb(0, 68, 255));
+  color: rgb(229, 255, 0);
+  background-image: radial-gradient(rgb(0, 255, 85), rgb(136, 162, 235));
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .companiesRow {
+    gap: 0.5rem;
+  }
+
+  .companyLogo {
+    width: 120px;
+    height: 65px;
+  }
+}
+
+@media (max-width: 768px) {
+  .companyLogo {
+    width: 100px;
+    height: 55px;
+  }
+
+  .companiesRow {
+    gap: 0.3rem;
+  }
+
+  .companyCard {
+    padding: 0.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .companyLogo {
+    width: 80px;
+    height: 40px;
+  }
+
+  .companiesRow {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .companyCard {
+    width: 40%;
+  }
 }

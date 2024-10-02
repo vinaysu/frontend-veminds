@@ -228,7 +228,7 @@ function Courses() {
             <span className={`${styles.payAfterPlacement}`}>
               Pay after Placement Available
             </span>
-            <h1 id='dataAnalysis' className={styles.title_mern}>Data Analysis</h1>
+            <h1 id='dataAnalysis' className={styles.title_mern}>Data Analytics</h1>
             <span className={`${styles.access}`}>
               Life time Access
             </span>
@@ -258,13 +258,13 @@ function Courses() {
 
             <div className={styles.buttonAndArrow}>
               <p className={styles.upskill} >Up skill on the most in demand skills in the market</p>
-              <div className={styles.technologyList}>
+              {/* <div className={styles.technologyList}>
                 <span className={styles.technology}>JavaScript</span>
                 <span className={styles.technology}>React.js</span>
                 <span className={styles.technology}>Node.js</span>
                 <span className={styles.technology}>MongoDB</span>
                 <span className={styles.technology}>Express.js</span>
-              </div>
+              </div> */}
               <KeyboardArrowUpIcon className={styles.upArrow}></KeyboardArrowUpIcon>
               <a href='#startForFree' ><button className="btn btn-primary btn-lg">Apply Now</button> </a>
             </div>

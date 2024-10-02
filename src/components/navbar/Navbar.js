@@ -49,7 +49,7 @@ function Navbar() {
                                     <li>MERN Full Stack</li>
                                 </a>
                                 <a href='/Courses#dataAnalysis'>
-                                    <li>Data Analysis</li>
+                                    <li>Data Analytics</li>
                                 </a>
                                 <a href='/Courses#dataScience'>
                                     <li>Data Science</li>

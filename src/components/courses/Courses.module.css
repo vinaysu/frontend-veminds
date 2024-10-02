@@ -216,7 +216,7 @@ h6 {
     margin-left: 30px;
     /* Indent the description slightly for visual hierarchy */
     font-weight: normal;
-    color: #555;
+    color: rgb(243, 239, 239);
     /* Optional, to soften the description text color */
 }
 
@@ -245,11 +245,14 @@ h6 {
     /* margin-top: 3rem; */
     padding: 4rem 0;
     background-image: radial-gradient(rgb(201, 233, 18), rgb(50, 90, 105));
+    font-weight: bolder;
 }
 
 .upskill {
 
     margin-bottom: 0px;
+    font-weight: bolder;
+    text-align: center;
 }
 
 .buttonAndArrow {
@@ -383,10 +386,12 @@ button {
         width: 90%;
         margin-bottom: 2rem;
     }
-    .right_fullstack{
+
+    .right_fullstack {
         margin: auto;
     }
-    .topContainer{
+
+    .topContainer {
         margin: auto;
     }
 }
@@ -429,10 +434,12 @@ button {
         width: 50px;
         font-size: 40px;
     }
-    .right_fullstack{
+
+    .right_fullstack {
         margin: auto;
     }
-    .topContainer{
+
+    .topContainer {
         margin: auto;
     }
 }
@@ -457,10 +464,12 @@ button {
     .buttonAndArrow {
         padding: 0.5rem;
     }
-    .right_fullstack{
+
+    .right_fullstack {
         margin: auto;
     }
-    .topContainer{
+
+    .topContainer {
         margin: auto;
     }
 
