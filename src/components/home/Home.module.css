@@ -138,7 +138,9 @@
 .button_startForFree {
   background-image: radial-gradient(rgb(134, 49, 49), rgb(29, 209, 185));
 }
-
+.button_startForFree:hover {
+  cursor: pointer;
+}
 @keyframes blink {
   0% {
     opacity: 1;

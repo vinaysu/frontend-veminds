@@ -1,0 +1,71 @@
+.signupContainer {
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f4f4f9;
+  /* Fallback color in case the image doesn't load */
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  background-image: url('https://res.cloudinary.com/dkasinto0/image/upload/v1726806341/logo-Ve-Minds_bfc8ut.jpg');
+  background-size: cover;
+  /* Ensures the image covers the entire container */
+  background-repeat: no-repeat;
+  /* Prevents the image from repeating */
+  background-position: center;
+  /* Centers the image in the container */
+  width: 100%;
+  height: auto;
+  /* Adjust this if you need a specific height */
+  min-height: 100vh;
+  /* Ensures the container takes at least the full viewport height */
+  text-align: center;
+
+}
+
+.signupForm {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 600px;
+  padding: 2rem;
+  margin: auto;
+  border-radius: 1em;
+
+
+}
+
+.inputField,
+.selectField {
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+  width: 500px;
+  background: none;
+  color: white;
+  font-weight: bolder;
+}
+
+.inputField:focus,
+.selectField:focus {
+  border-color: #007BFF;
+}
+
+.signupBtn {
+  padding: 12px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 500px;
+}
+
+.signupBtn:hover {
+  background-color: #0056b3;
+}

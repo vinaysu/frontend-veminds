@@ -32,6 +32,35 @@ function Home() {
     { id: 12, name: 'Company 12', img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjG7O851ZxbaSjBbO-o2vnmuxSl2h4w2LpgDAPNW0_ZzeYyIvWjFhDDCkUFAEodurvydA&usqp=CAU' },
   ];
 
+  const handleClick = async () => {
+    const fullName = 'John Doe'; // replace with the actual input value
+    const mobile = '9876543210'; // replace with the actual input value
+    window.alert('triggered')
+
+    try {
+      const response = await fetch('http://localhost:5000/payafterplacement', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ fullName, mobile }),
+      });
+
+      const data = await response.json();
+      if (data.success) {
+        console.log(data.message);
+        alert('successfully applied')
+      } else {
+        console.error(data.message);
+        alert('not successfully applied')
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      alert('error in the mentod')
+    }
+  };
+
+
 
   return (
     <div className={`${styles.home}`}>
@@ -148,9 +177,9 @@ function Home() {
             <span className={styles.textColorBlue}>Empowering</span> your future with hands-on <span className={styles.textColorBlue}>IT training</span> and <span className={styles.textColorBlue}>guaranteed job</span> opportunities.
           </h1>
           <div className={styles.courses}>
-           <a href='/Courses#fullStack' ><span>MERN Stack Development</span></a> 
-           <a href='/Courses#dataScience' > <span>Data Science</span></a>
-           <a href='/Courses#dataAnalysis' > <span>Data Analytics</span></a>
+            <a href='/Courses#fullStack' ><span>MERN Stack Development</span></a>
+            <a href='/Courses#dataScience' > <span>Data Science</span></a>
+            <a href='/Courses#dataAnalysis' > <span>Data Analytics</span></a>
           </div>
           <div className={styles.buttons}>
             <button className={`btn btn-primary ${styles.button}`}>Enroll Now</button>
@@ -197,7 +226,7 @@ function Home() {
                   }}
                 />
                 <div className={styles.buttonContainer_StartForFree}>
-                  <button className={`btn btn-light btn-lg w-100 ${styles.button_startForFree}`}>Apply Now For Free</button>
+                  <button onClick={handleClick} className={`btn btn-light btn-lg w-100 ${styles.button_startForFree}`}>Apply Now For Free</button>
                 </div>
               </div>
             </div>
@@ -220,7 +249,7 @@ function Home() {
 
         {/* Row 2 - Scroll Right to Left */}
         <div className={`${styles.companiesRow} ${styles.scrollRightToLeft}`}>
-          {companies.slice(4,8).map((company) => (
+          {companies.slice(4, 8).map((company) => (
             <div key={company.id} className={styles.companyCard}>
               <img src={company.img} alt={company.name} className={styles.companyLogo} />
             </div>
