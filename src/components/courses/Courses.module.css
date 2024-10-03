@@ -457,6 +457,8 @@ button {
         margin-bottom: 10px;
     }
 
+
+
     .buttonContainer_StartForFree {
         margin-top: 2rem;
     }
@@ -476,4 +478,12 @@ button {
     .technology {
         font-size: 12px;
     }
+}
+
+.startForFree {
+    text-align: center;
+    border: solid 1px white;
+    padding: 0.5rem;
+    border-radius: 1em;
+    box-shadow: #202020 10px 10px;
 }

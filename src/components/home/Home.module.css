@@ -137,10 +137,20 @@
 
 .button_startForFree {
   background-image: radial-gradient(rgb(134, 49, 49), rgb(29, 209, 185));
+  cursor: pointer;
 }
+
 .button_startForFree:hover {
   cursor: pointer;
 }
+.startForFree{
+  text-align: center;
+  border: solid 1px white;
+  padding: 0.5rem;
+  border-radius: 1em;
+  box-shadow: #202020 10px 10px ; 
+}
+
 @keyframes blink {
   0% {
     opacity: 1;
@@ -253,6 +263,7 @@
   .rightTitleSection {
     width: 100%;
     /* Full width for right section */
+    
   }
 
   .courses {

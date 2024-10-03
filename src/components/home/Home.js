@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './Home.module.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { TextField, InputAdornment, Avatar } from '@mui/material';
@@ -32,11 +32,21 @@ function Home() {
     { id: 12, name: 'Company 12', img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjG7O851ZxbaSjBbO-o2vnmuxSl2h4w2LpgDAPNW0_ZzeYyIvWjFhDDCkUFAEodurvydA&usqp=CAU' },
   ];
 
-  const handleClick = async () => {
-    const fullName = 'John Doe'; // replace with the actual input value
-    const mobile = '9876543210'; // replace with the actual input value
-    window.alert('triggered')
+  const [fullName, setFullName] = useState('');
+  const [mobile, setMobile] = useState('');
 
+  const handleFullNameChange = (event) => {
+    setFullName(event.target.value);
+  };
+
+  const handleMobileChange = (event) => {
+    setMobile(event.target.value);
+  };
+
+
+  const handleClick = async () => {
+    console.log('Button clicked'); // Add this for debugging
+    window.alert('triggered');
     try {
       const response = await fetch('http://localhost:5000/payafterplacement', {
         method: 'POST',
@@ -49,16 +59,19 @@ function Home() {
       const data = await response.json();
       if (data.success) {
         console.log(data.message);
-        alert('successfully applied')
+        alert('successfully applied');
       } else {
         console.error(data.message);
-        alert('not successfully applied')
+        alert('not successfully applied');
       }
     } catch (error) {
       console.error('Error:', error);
-      alert('error in the mentod')
+      alert('error in the method');
     }
   };
+
+
+
 
 
 
@@ -188,15 +201,16 @@ function Home() {
         </div>
 
         <div className={styles.rightTitleSection}>
-          <div id="callback" className={styles.snakeBorder}>
+          <div id="callback" >
             <div className={styles.startForFree}>
               <div className={styles.top_startForFree}>
                 <h2>Start learning for FREE</h2>
                 <p>Lectures & Assignments curated by Top Tech Professionals</p>
               </div>
               <div className={styles.bottom_startForFree}>
-                {/* Name Input Field with Avatar Icon */}
+
                 <TextField
+                  onChange={handleFullNameChange}
                   className={styles.input_startForFree}
                   label="Full Name"
                   variant="outlined"
@@ -211,11 +225,12 @@ function Home() {
                       </InputAdornment>
                     ),
                   }}
-                  style={{ marginBottom: '20px' }} // Optional: add spacing between fields
+                  style={{ marginBottom: '20px' }}
                 />
 
-                {/* Mobile Number Input Field with +91 Prefix */}
+
                 <TextField
+                  onChange={handleMobileChange}
                   className={styles.input_startForFree}
                   label="Mobile Number"
                   variant="outlined"
@@ -226,7 +241,10 @@ function Home() {
                   }}
                 />
                 <div className={styles.buttonContainer_StartForFree}>
-                  <button onClick={handleClick} className={`btn btn-light btn-lg w-100 ${styles.button_startForFree}`}>Apply Now For Free</button>
+                  <button onClick={handleClick} className={`btn btn-light btn-lg w-100 ${styles.button_startForFree}`}>
+                    Apply Now For Free
+                  </button>
+
                 </div>
               </div>
             </div>

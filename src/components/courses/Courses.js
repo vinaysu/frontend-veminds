@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import styles from './Courses.module.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { TextField, InputAdornment, Avatar } from '@mui/material';
@@ -23,6 +23,45 @@ function Courses() {
     }
   }, []);
 
+  const [fullName, setFullName] = useState('');
+  const [mobile, setMobile] = useState('');
+
+  const handleFullNameChange = (event) => {
+    setFullName(event.target.value);
+  };
+
+  const handleMobileChange = (event) => {
+    setMobile(event.target.value);
+  };
+
+
+  const handleClick = async () => {
+    console.log('Button clicked'); // Add this for debugging
+    window.alert('triggered');
+    try {
+      const response = await fetch('http://localhost:5000/payafterplacement', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ fullName, mobile }),
+      });
+
+      const data = await response.json();
+      if (data.success) {
+        console.log(data.message);
+        alert('successfully applied');
+      } else {
+        console.error(data.message);
+        alert('not successfully applied');
+        
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      alert('error in the method');
+    }
+  };
+
   return (
     <div className={styles.main_courseSection} >
       <div className={styles.bg_image} >
@@ -37,54 +76,56 @@ function Courses() {
 
           </div>
           <div id='startForFree' className={styles.right_fullstack} >
-            <div className={styles.snakeBorder}>
-              <div className={styles.startForFree} >
-                <div className={styles.top_startForFree} >
-                  <h2>Start learning for FREE</h2>
-                  <p>Lectures & Assignments curated by Top Tech Professionals</p>
-                </div>
-                <div className={styles.bottom_startForFree} >
-                  {/* Name Input Field with Avatar Icon */}
-                  <TextField
-                    className={styles.input_startForFree}
-                    label="Full Name"
-                    variant="outlined"
-                    placeholder='Enter the FullName'
-                    fullWidth
-                    InputProps={{
-                      startAdornment: (
-                        <InputAdornment position="start">
-                          <Avatar>
-                            <AccountCircleIcon />
-                          </Avatar>
-                        </InputAdornment>
-                      ),
-                    }}
-                    style={{ marginBottom: '20px' }} // Optional: add spacing between fields
-                  />
 
-                  {/* Mobile Number Input Field with +91 Prefix */}
-                  <TextField
-                    className={styles.input_startForFree}
-                    label="Mobile Number"
-                    variant="outlined"
-                    placeholder='Enter the WhatsApp Number'
-                    fullWidth
-                    InputProps={{
-                      startAdornment: (
-                        <InputAdornment position="start">
-                          +91
-                        </InputAdornment>
-                      ),
-                    }}
-                  />
-                  <div className={styles.buttonContainer_StartForFree} >
-                    <button className={` btn btn-light btn-lg w-100 ${styles.button_startForFree}`} >Start For Free</button>
+            <div className={styles.startForFree} >
+              <div className={styles.top_startForFree} >
+                <h2>Start learning for FREE</h2>
+                <p>Lectures & Assignments curated by Top Tech Professionals</p>
+              </div>
+              <div className={styles.bottom_startForFree} >
 
-                  </div>
+                <TextField
+                  onChange={handleFullNameChange}
+                  className={styles.input_startForFree}
+                  label="Full Name"
+                  variant="outlined"
+                  placeholder='Enter the FullName'
+                  fullWidth
+                  InputProps={{
+                    startAdornment: (
+                      <InputAdornment position="start">
+                        <Avatar>
+                          <AccountCircleIcon />
+                        </Avatar>
+                      </InputAdornment>
+                    ),
+                  }}
+                  style={{ marginBottom: '20px' }}
+                />
+
+
+                <TextField
+                  onChange={handleMobileChange}
+                  className={styles.input_startForFree}
+                  label="Mobile Number"
+                  variant="outlined"
+                  placeholder='Enter the WhatsApp Number'
+                  fullWidth
+                  InputProps={{
+                    startAdornment: (
+                      <InputAdornment position="start">
+                        +91
+                      </InputAdornment>
+                    ),
+                  }}
+                />
+                <div className={styles.buttonContainer_StartForFree} >
+                  <button onClick={handleClick} className={` btn btn-light btn-lg w-100 ${styles.button_startForFree}`} >Start For Free</button>
+
                 </div>
               </div>
             </div>
+
 
           </div>
 
