@@ -48,7 +48,7 @@ function Home() {
     console.log('Button clicked'); // Add this for debugging
     window.alert('triggered');
     try {
-      const response = await fetch('http://localhost:5000/payafterplacement', {
+      const response = await fetch('http://backend-veminds.onrender.com/payafterplacement', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

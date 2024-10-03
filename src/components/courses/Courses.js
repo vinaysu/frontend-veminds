@@ -54,7 +54,7 @@ function Courses() {
       } else {
         console.error(data.message);
         alert('not successfully applied');
-        
+
       }
     } catch (error) {
       console.error('Error:', error);
