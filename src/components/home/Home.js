@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,useRef } from 'react';
 import styles from './Home.module.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { TextField, InputAdornment, Avatar } from '@mui/material';
@@ -35,6 +35,10 @@ function Home() {
   const [fullName, setFullName] = useState('');
   const [mobile, setMobile] = useState('');
 
+    // Create refs for the input fields
+    const fullNameRef = useRef();
+    const mobileRef = useRef();
+
   const handleFullNameChange = (event) => {
     setFullName(event.target.value);
   };
@@ -47,8 +51,23 @@ function Home() {
   const handleClick = async () => {
     console.log('Button clicked'); // Add this for debugging
     window.alert('triggered');
+    // Check for empty fields
+    if (!fullName) {
+      fullNameRef.current.focus(); // Focus on Full Name field
+      alert('Please enter your full name.');
+      return; // Prevent form submission
+    }
+
+    if (!mobile) {
+      mobileRef.current.focus(); // Focus on Mobile field
+      alert('Please enter your mobile number.');
+      return; // Prevent form submission
+    }
+
+
+
     try {
-      const response = await fetch('http://backend-veminds.onrender.com/payafterplacement', {
+      const response = await fetch('https://backend-veminds.onrender.com/payafterplacement', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -57,8 +76,12 @@ function Home() {
       });
 
       const data = await response.json();
+      console.log('Received data:', data);
+
       if (data.success) {
         console.log(data.message);
+        setFullName('')
+        setMobile('')
         alert('successfully applied');
       } else {
         console.error(data.message);
@@ -210,6 +233,8 @@ function Home() {
               <div className={styles.bottom_startForFree}>
 
                 <TextField
+                 inputRef={fullNameRef} // Attach ref to the input field
+                  value={fullName}
                   onChange={handleFullNameChange}
                   className={styles.input_startForFree}
                   label="Full Name"
@@ -230,6 +255,8 @@ function Home() {
 
 
                 <TextField
+                 inputRef={mobileRef} // Attach ref to the input field
+                  value={mobile}
                   onChange={handleMobileChange}
                   className={styles.input_startForFree}
                   label="Mobile Number"

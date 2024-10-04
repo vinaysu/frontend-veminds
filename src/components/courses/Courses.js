@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import styles from './Courses.module.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { TextField, InputAdornment, Avatar } from '@mui/material';
@@ -25,6 +25,9 @@ function Courses() {
 
   const [fullName, setFullName] = useState('');
   const [mobile, setMobile] = useState('');
+  // Create refs for the input fields
+  const fullNameRef = useRef();
+  const mobileRef = useRef();
 
   const handleFullNameChange = (event) => {
     setFullName(event.target.value);
@@ -38,8 +41,23 @@ function Courses() {
   const handleClick = async () => {
     console.log('Button clicked'); // Add this for debugging
     window.alert('triggered');
+    // Check for empty fields
+    if (!fullName) {
+      fullNameRef.current.focus(); // Focus on Full Name field
+      alert('Please enter your full name.');
+      return; // Prevent form submission
+    }
+
+    if (!mobile) {
+      mobileRef.current.focus(); // Focus on Mobile field
+      alert('Please enter your mobile number.');
+      return; // Prevent form submission
+    }
+
+
+
     try {
-      const response = await fetch('http://localhost:5000/payafterplacement', {
+      const response = await fetch('https://backend-veminds.onrender.com/payafterplacement', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -51,6 +69,8 @@ function Courses() {
       if (data.success) {
         console.log(data.message);
         alert('successfully applied');
+        setFullName('')
+        setMobile('')
       } else {
         console.error(data.message);
         alert('not successfully applied');
@@ -85,6 +105,8 @@ function Courses() {
               <div className={styles.bottom_startForFree} >
 
                 <TextField
+                  value={fullName}
+                  inputRef={fullNameRef}
                   onChange={handleFullNameChange}
                   className={styles.input_startForFree}
                   label="Full Name"
@@ -105,6 +127,8 @@ function Courses() {
 
 
                 <TextField
+                  value={mobile}
+                  inputRef={mobileRef}
                   onChange={handleMobileChange}
                   className={styles.input_startForFree}
                   label="Mobile Number"

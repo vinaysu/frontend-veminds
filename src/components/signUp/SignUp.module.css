@@ -49,6 +49,23 @@
   font-weight: bolder;
 }
 
+/* styles.css or your CSS module file */
+.selectField {
+  background-color: #f0f8ff;
+  /* Change this to your desired background color */
+  border: 1px solid #ccc;
+  /* Optional: Add border for better visibility */
+  padding: 10px;
+  /* Optional: Add some padding */
+  border-radius: 4px;
+  /* Optional: Add border radius for rounded corners */
+  color: #333;
+  /* Change text color if needed */
+  font-size: 16px;
+  /* Adjust font size */
+}
+
+
 .inputField:focus,
 .selectField:focus {
   border-color: #007BFF;
