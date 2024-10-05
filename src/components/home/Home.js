@@ -62,23 +62,33 @@ function Home() {
 
 
   const handleClick = async () => {
-    console.log('Button clicked'); // Add this for debugging
-    window.alert('triggered');
-    // Check for empty fields
+    console.log('Button clicked'); // Debugging
+
+    // Validate full name (no special characters or numbers)
+    const fullNamePattern = /^[a-zA-Z\s]+$/; // Allows only letters and spaces
     if (!fullName) {
-      fullNameRef.current.focus(); // Focus on Full Name field
+      fullNameRef.current.focus();
       alert('Please enter your full name.');
-      return; // Prevent form submission
+      return;
+    } else if (!fullNamePattern.test(fullName)) {
+      fullNameRef.current.focus();
+      alert('Full name should contain only letters and spaces.');
+      return;
     }
 
+    // Validate mobile number (should be 10 digits)
+    const mobilePattern = /^[0-9]{10}$/; // Only 10 digits allowed
     if (!mobile) {
-      mobileRef.current.focus(); // Focus on Mobile field
+      mobileRef.current.focus();
       alert('Please enter your mobile number.');
-      return; // Prevent form submission
+      return;
+    } else if (!mobilePattern.test(mobile)) {
+      mobileRef.current.focus();
+      alert('Please enter a valid 10-digit mobile number.');
+      return;
     }
 
-
-
+    // Proceed with the form submission if validations pass
     try {
       const response = await fetch('https://backend-veminds.onrender.com/payafterplacement', {
         method: 'POST',
@@ -93,18 +103,19 @@ function Home() {
 
       if (data.success) {
         console.log(data.message);
-        setFullName('')
-        setMobile('')
-        alert('successfully applied');
+        alert('Successfully applied');
+        setFullName(''); // Clear full name field
+        setMobile(''); // Clear mobile field
       } else {
         console.error(data.message);
-        alert('not successfully applied');
+        alert('Not successfully applied');
       }
     } catch (error) {
       console.error('Error:', error);
-      alert('error in the method');
+      alert('Error in the method');
     }
   };
+
 
   const handleWhatsapp = () => {
     const phoneNumber = '919390577569'; // Replace with the target phone number
@@ -275,7 +286,7 @@ function Home() {
               </div>
               <div className={styles.bottom_startForFree}>
 
-              <TextField
+                <TextField
                   value={fullName}
                   inputRef={fullNameRef}
                   onChange={handleFullNameChange}

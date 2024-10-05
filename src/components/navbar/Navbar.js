@@ -20,11 +20,13 @@ function Navbar() {
     return (
         <div className={styles.mainContainer}>
             <div className={styles.left}>
+                <Link to={'/'} >
                 <img
                     className={styles.logo}
                     src='https://res.cloudinary.com/dkasinto0/image/upload/v1726806341/logo-Ve-Minds_bfc8ut.jpg'
                     alt='Vemind Logo'
                 />
+                </Link>
                 <h2 className={styles.title}>veminds</h2>
             </div>
             <div className={`${styles.right} ${menuOpen ? styles.showMenu : ''}`}>
