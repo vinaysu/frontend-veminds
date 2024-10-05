@@ -6,7 +6,7 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle'; // Icon for a
 import PhoneIcon from '@mui/icons-material/Phone'; // Icon for phone input
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import { FaWhatsapp } from 'react-icons/fa'; // Add this line at the top of your Home.js file
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 
 
 function Home() {
@@ -264,14 +264,14 @@ function Home() {
             <span className={styles.textColorBlue}>Empowering</span> your future with hands-on <span className={styles.textColorBlue}>IT training</span> and <span className={styles.textColorBlue}>guaranteed job</span> opportunities.
           </h1>
           <div className={styles.courses}>
-            <a href='/Courses#fullStack' ><span>MERN Stack Development</span></a>
-            <a href='/Courses#dataScience' > <span>Data Science</span></a>
-            <a href='/Courses#dataAnalysis' > <span>Data Analytics</span></a>
+            <Link to={'/Courses#fullStack'} ><span>MERN Stack Development</span></Link>
+            <Link to={'/Courses#dataScience'} > <span>Data Science</span></Link>
+            <Link to={'/Courses#dataAnalysis'} > <span>Data Analytics</span></Link>
           </div>
           <div className={styles.buttons}>
-            <a href='/SignUp#signupContainer' className={`btn btn-primary ${styles.button}   ${styles.atag}  `}>
+            <Link to={'/SignUp#signupContainer'} className={`btn btn-primary ${styles.button}   ${styles.atag}  `}>
               Enroll Now
-            </a>
+            </Link>
 
             <button className={`btn btn-primary ${styles.button}`}>Know more</button>
           </div>

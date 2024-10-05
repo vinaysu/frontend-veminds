@@ -16,16 +16,22 @@ function Navbar() {
     const isActive = (pathname) => {
         return location.pathname === pathname;
     };
+    const scrollToSection = (sectionId) => {
+        const section = document.getElementById(sectionId);
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
 
     return (
         <div className={styles.mainContainer}>
             <div className={styles.left}>
                 <Link to={'/'} >
-                <img
-                    className={styles.logo}
-                    src='https://res.cloudinary.com/dkasinto0/image/upload/v1726806341/logo-Ve-Minds_bfc8ut.jpg'
-                    alt='Vemind Logo'
-                />
+                    <img
+                        className={styles.logo}
+                        src='https://res.cloudinary.com/dkasinto0/image/upload/v1726806341/logo-Ve-Minds_bfc8ut.jpg'
+                        alt='Vemind Logo'
+                    />
                 </Link>
                 <h2 className={styles.title}>veminds</h2>
             </div>
@@ -47,18 +53,19 @@ function Navbar() {
                     {showCoursesDropdown && (
                         <div className={styles.coursesDropdown}>
                             <ul>
-                                <a href='/Courses#fullStack'>
-                                    <li>MERN Full Stack</li>
-                                </a>
-                                <a href='/Courses#dataAnalysis'>
-                                    <li>Data Analytics</li>
-                                </a>
-                                <a href='/Courses#dataScience'>
-                                    <li>Data Science</li>
-                                </a>
+                                <li onClick={() => scrollToSection('fullStack')}>
+                                    <Link to="/Courses#fullStack">MERN Full Stack</Link>
+                                </li>
+                                <li onClick={() => scrollToSection('dataAnalysis')}>
+                                    <Link to="/Courses#dataAnalysis">Data Analytics</Link>
+                                </li>
+                                <li onClick={() => scrollToSection('dataScience')}>
+                                    <Link to="/Courses#dataScience">Data Science</Link>
+                                </li>
                             </ul>
                         </div>
                     )}
+
                 </div>
 
                 <Link className={`${styles.link} ${isActive('/contact') ? styles.active : ''}`} to={'/contact'}>
