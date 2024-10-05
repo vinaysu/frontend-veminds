@@ -86,3 +86,35 @@
 .signupBtn:hover {
   background-color: #0056b3;
 }
+
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .signupForm {
+    width: 100%;
+    padding: 1.5rem;
+  }
+
+  .inputField,
+  .selectField,
+  .signupBtn {
+    width: 100%;
+    /* Make inputs take full width on smaller screens */
+    font-size: 14px;
+    /* Slightly reduce font size */
+  }
+}
+
+/* Media query for very small screens */
+@media (max-width: 480px) {
+  .signupForm {
+    padding: 1rem;
+  }
+
+  .inputField,
+  .selectField,
+  .signupBtn {
+    font-size: 12px;
+    /* Further reduce font size for small devices */
+  }
+}

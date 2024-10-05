@@ -100,13 +100,17 @@
   background-color: #3be1e4;
   color: black;
   font-weight: 800;
+
 }
 
+.atag {
+  padding-top: 10px;
+}
 
 .button:hover {
   transform: scale(1.2);
   /* Increases size by 10% when hovered */
-  background-color: rgb(243, 8, 204);
+  background-color: #EC1313;
 }
 
 .courses {
@@ -143,12 +147,13 @@
 .button_startForFree:hover {
   cursor: pointer;
 }
-.startForFree{
+
+.startForFree {
   text-align: center;
   border: solid 1px white;
   padding: 0.5rem;
   border-radius: 1em;
-  box-shadow: #202020 10px 10px ; 
+  box-shadow: #202020 10px 10px;
 }
 
 @keyframes blink {
@@ -263,7 +268,7 @@
   .rightTitleSection {
     width: 100%;
     /* Full width for right section */
-    
+
   }
 
   .courses {
@@ -364,15 +369,15 @@
 .companiesContainer {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 0.5rem;
   /* Space between the rows */
   overflow: hidden;
   /* Hide the overflow to allow smooth scrolling */
-  padding: 2rem;
+  padding: 1rem;
   background-color: #f5f5f5;
   border-radius: 15px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  margin: 1rem;
+  margin:  0.2rem;
 }
 
 /* Common row styling */
@@ -406,7 +411,8 @@
   border-radius: 10px;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: solid 0.5em rgb(11, 238, 189);
+  border: solid 0.5em rgb(1, 34, 27);
+  cursor: pointer;
 }
 
 .companyCard:hover {
@@ -523,8 +529,8 @@
   /* Center the text */
   z-index: 0.5;
   /* Place it behind the scrolling content */
-  color: rgb(229, 255, 0);
-  background-image: radial-gradient(rgb(0, 255, 85), rgb(136, 162, 235));
+  color: #EC1313;
+  background-image: radial-gradient(rgb(0, 255, 85), rgb(86, 86, 88));
   width: 100%;
   height: 100%;
   display: flex;
@@ -573,5 +579,71 @@
 
   .companyCard {
     width: 40%;
+  }
+}
+
+/* WhatsAppButton.css */
+.whatsapp_button {
+  background-color: #25D366;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s;
+}
+
+.whatsapp_button:hover {
+  background-color: #128C7E;
+  /* Darker green on hover */
+}
+
+.whatsapp_icon {
+  margin-right: 8px;
+}
+
+.whatsappButtons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.sliderButton {
+  width: 20vw;
+}
+
+
+/* Responsive rules */
+@media (max-width: 768px) {
+  .whatsappButtons {
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 15px; /* Adjust spacing between buttons */
+  }
+
+  .sliderButton,
+  .whatsapp_button {
+    width: 100%; /* Full-width buttons */
+    max-width: 300px; /* Restrict the max width */
+    padding: 10px; /* Slightly reduce padding */
+    font-size: 14px; /* Reduce font size */
+  }
+
+  .whatsapp_icon {
+    font-size: 18px; /* Reduce icon size */
+  }
+}
+
+@media (max-width: 480px) {
+  .sliderButton,
+  .whatsapp_button {
+    width: 100%; /* Full-width buttons */
+    padding: 8px; /* Further reduce padding */
+    font-size: 12px; /* Further reduce font size */
+  }
+
+  .whatsapp_icon {
+    font-size: 16px; /* Reduce icon size for small screens */
   }
 }

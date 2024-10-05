@@ -1,11 +1,17 @@
-import React, { useState,useRef } from 'react';
+import React, { useState, useRef } from 'react';
 import styles from './Home.module.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { TextField, InputAdornment, Avatar } from '@mui/material';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle'; // Icon for avatar
 import PhoneIcon from '@mui/icons-material/Phone'; // Icon for phone input
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import { FaWhatsapp } from 'react-icons/fa'; // Add this line at the top of your Home.js file
+import { useNavigate } from 'react-router-dom';
+
 
 function Home() {
+
+  const navigate = useNavigate()
   // Smooth scroll to the 'callback' section
   const scrollToCallbackSection = () => {
     const callbackSection = document.getElementById('callback');
@@ -16,6 +22,9 @@ function Home() {
       });
     }
   };
+  function navigation() {
+    navigate('/Signup#signupContainer')
+  }
 
   const companies = [
     { id: 1, name: 'Company 1', img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkDJrj-0ClYpDhbvQ7X1F6AGrrxGBnA2gf_w&s' },
@@ -30,14 +39,18 @@ function Home() {
     { id: 10, name: 'Company 10', img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFFP8M_hFXaKq2qMI1jc5DgUMrUhEbmuDNIg&s' },
     { id: 11, name: 'Company 11', img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQR-dQW-M1cr71P0UTLNLsihy-oZaUvmieNfQ&s' },
     { id: 12, name: 'Company 12', img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjG7O851ZxbaSjBbO-o2vnmuxSl2h4w2LpgDAPNW0_ZzeYyIvWjFhDDCkUFAEodurvydA&usqp=CAU' },
+    { id: 9, name: 'Company 9', img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaIrYGtApIzun4j1d1OKODJnG3DIcMBbGD2g&s' },
+    { id: 10, name: 'Company 10', img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9T7GqMLnF9zexgDa3co-mBkBgTsg7kiw3rA&s' },
+    { id: 11, name: 'Company 11', img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjvBfnKgk_7nu9-05R98s3hUqcgqaWBjNHww&s' },
+    { id: 12, name: 'Company 12', img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQu4HhRfM3pNSdga8QcorerPq7hH7xIjvDdyA&s' },
   ];
 
   const [fullName, setFullName] = useState('');
   const [mobile, setMobile] = useState('');
 
-    // Create refs for the input fields
-    const fullNameRef = useRef();
-    const mobileRef = useRef();
+  // Create refs for the input fields
+  const fullNameRef = useRef();
+  const mobileRef = useRef();
 
   const handleFullNameChange = (event) => {
     setFullName(event.target.value);
@@ -93,6 +106,15 @@ function Home() {
     }
   };
 
+  const handleWhatsapp = () => {
+    const phoneNumber = '919390577569'; // Replace with the target phone number
+    const message = 'Hello, I would like to inquire about the courses.'; // Default message
+    const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+    // Open WhatsApp
+    window.open(whatsappURL, '_blank');
+  };
+
 
 
 
@@ -141,12 +163,18 @@ function Home() {
             {/* Text Overlay */}
             <div className={`${styles.carouselText}`}>
               <h2>Transform your career with expert training and job assurance.</h2>
-              <button
-                className={`btn btn-primary ${styles.sliderButton} ${styles.button} `}
-                onClick={scrollToCallbackSection} // Trigger smooth scroll on click
-              >
-                Request a callback
-              </button>
+              <div className={styles.whatsappButtons} >
+                <button
+                  className={`btn btn-primary ${styles.sliderButton} ${styles.button} `}
+                  onClick={scrollToCallbackSection} // Trigger smooth scroll on click
+                >
+                  Request a callback
+                </button>
+                <button onClick={handleWhatsapp} className={styles.whatsapp_button}>
+                  <FaWhatsapp className={styles.whatsapp_icon} ></FaWhatsapp>
+                  Contact Us on WhatsApp
+                </button>
+              </div>
             </div>
           </div>
           <div className={`carousel-item ${styles.customCarouselItem}`}>
@@ -158,12 +186,18 @@ function Home() {
             {/* Text Overlay */}
             <div className={`${styles.carouselText}`}>
               <h2>Learn from best Mentors and Instructors</h2>
-              <button
-                className={`btn btn-primary ${styles.sliderButton} ${styles.button} `}
-                onClick={scrollToCallbackSection} // Trigger smooth scroll on click
-              >
-                Request a callback
-              </button>
+              <div className={styles.whatsappButtons} >
+                <button
+                  className={`btn btn-primary ${styles.sliderButton} ${styles.button} `}
+                  onClick={scrollToCallbackSection} // Trigger smooth scroll on click
+                >
+                  Request a callback
+                </button>
+                <button onClick={handleWhatsapp} className={styles.whatsapp_button}>
+                  <FaWhatsapp className={styles.whatsapp_icon} ></FaWhatsapp>
+                  Contact Us on WhatsApp
+                </button>
+              </div>
             </div>
           </div>
           <div className={`carousel-item ${styles.customCarouselItem}`}>
@@ -175,12 +209,18 @@ function Home() {
             {/* Text Overlay */}
             <div className={`${styles.carouselText}`}>
               <h2>You need to learn industry-relevant skills taught by the best mentors in today's competitive world</h2>
-              <button
-                className={`btn btn-primary ${styles.sliderButton} ${styles.button} `}
-                onClick={scrollToCallbackSection} // Trigger smooth scroll on click
-              >
-                Request a callback
-              </button>
+              <div className={styles.whatsappButtons} >
+                <button
+                  className={`btn btn-primary ${styles.sliderButton} ${styles.button} `}
+                  onClick={scrollToCallbackSection} // Trigger smooth scroll on click
+                >
+                  Request a callback
+                </button>
+                <button onClick={handleWhatsapp} className={styles.whatsapp_button}>
+                  <FaWhatsapp className={styles.whatsapp_icon} ></FaWhatsapp>
+                  Contact Us on WhatsApp
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -218,7 +258,10 @@ function Home() {
             <a href='/Courses#dataAnalysis' > <span>Data Analytics</span></a>
           </div>
           <div className={styles.buttons}>
-            <button className={`btn btn-primary ${styles.button}`}>Enroll Now</button>
+            <a href='/SignUp#signupContainer' className={`btn btn-primary ${styles.button}   ${styles.atag}  `}>
+              Enroll Now
+            </a>
+
             <button className={`btn btn-primary ${styles.button}`}>Know more</button>
           </div>
         </div>
@@ -232,14 +275,14 @@ function Home() {
               </div>
               <div className={styles.bottom_startForFree}>
 
-                <TextField
-                 inputRef={fullNameRef} // Attach ref to the input field
+              <TextField
                   value={fullName}
+                  inputRef={fullNameRef}
                   onChange={handleFullNameChange}
-                  className={styles.input_startForFree}
+                  className={styles.input_startForFree} // Keep your className here
                   label="Full Name"
                   variant="outlined"
-                  placeholder="Enter the Full Name"
+                  placeholder="Enter the FullName"
                   fullWidth
                   InputProps={{
                     startAdornment: (
@@ -249,22 +292,60 @@ function Home() {
                         </Avatar>
                       </InputAdornment>
                     ),
+                    style: {
+                      borderColor: 'white',
+                      marginBottom: '30px'// This applies the border color to the input field
+                    },
                   }}
-                  style={{ marginBottom: '20px' }}
+                  sx={{
+                    '& .MuiOutlinedInput-root': {
+                      '& fieldset': {
+                        borderColor: '#3BE1E4', // This sets the initial border color
+                      },
+                      '&:hover fieldset': {
+                        borderColor: 'yellow', // This sets the hover state border color
+                      },
+                      '&.Mui-focused fieldset': {
+                        borderColor: 'green', // This sets the focused border color
+                      },
+                    },
+                  }}
                 />
 
 
+
                 <TextField
-                 inputRef={mobileRef} // Attach ref to the input field
                   value={mobile}
+                  inputRef={mobileRef}
                   onChange={handleMobileChange}
-                  className={styles.input_startForFree}
+                  className={styles.input_startForFree} // Keep your custom class if needed
                   label="Mobile Number"
                   variant="outlined"
                   placeholder="Enter the WhatsApp Number"
                   fullWidth
                   InputProps={{
-                    startAdornment: <InputAdornment position="start">+91</InputAdornment>,
+                    startAdornment: (
+                      <InputAdornment position="start">
+                        +91
+                      </InputAdornment>
+                    ),
+                    style: {
+                      borderColor: 'red',
+                      marginBottom: '30px' // This applies the border color to the input field
+                    },
+                  }}
+                  sx={{
+                    '& .MuiOutlinedInput-root': {
+                      '& fieldset': {
+                        borderColor: '#3BE1E4', // Initial border color
+                      },
+                      '&:hover fieldset': {
+                        borderColor: 'yellow', // Hover border color
+                      },
+                      '&.Mui-focused fieldset': {
+                        borderColor: 'green', // Focused border color
+                      },
+                    },
                   }}
                 />
                 <div className={styles.buttonContainer_StartForFree}>
@@ -303,6 +384,14 @@ function Home() {
         {/* Row 1 - Scroll Left to Right */}
         <div className={`${styles.companiesRow} ${styles.scrollLeftToRight}`}>
           {companies.slice(8, 12).map((company) => (
+            <div key={company.id} className={styles.companyCard}>
+              <img src={company.img} alt={company.name} className={styles.companyLogo} />
+            </div>
+          ))}
+        </div>
+        {/* Row 2 - Scroll Right to Left */}
+        <div className={`${styles.companiesRow} ${styles.scrollRightToLeft}`}>
+          {companies.slice(12, 16).map((company) => (
             <div key={company.id} className={styles.companyCard}>
               <img src={company.img} alt={company.name} className={styles.companyLogo} />
             </div>

@@ -52,7 +52,7 @@ function SignUp() {
   };
 
   return (
-    <div className={styles.signupContainer}>
+    <div id='signupContainer' className={styles.signupContainer}>
       <h2>Sign Up for a Course</h2>
       <form onSubmit={handleSubmit} className={styles.signupForm}>
         <input

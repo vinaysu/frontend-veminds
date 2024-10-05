@@ -100,16 +100,17 @@
 }
 
 .title_mern {
-    color: red;
+    color: rgb(255, 0, 149);
 }
 
 .payAfterPlacement,
 .access {
     font-size: 20px;
+    font-weight: bolder;
     margin: 0 50px;
     padding: 10px;
     /* Add padding for better appearance */
-    background-image: linear-gradient(to top right, #2a09e7, #ff5e00);
+    background-image: linear-gradient(to top right, #0c0c0c, rgb(255, 0, 0));
     /* Gradient background */
     -webkit-background-clip: text;
     /* Clip background to text */
@@ -119,7 +120,7 @@
     /* Ensures the background and border wrap tightly around the text */
     animation: blink 1s infinite;
     /* Blink effect */
-    border: solid 1px rgb(205, 50, 159);
+    border: solid 0.3rem #3BE1E4;
     border-radius: 10px;
 }
 
@@ -244,7 +245,7 @@ h6 {
 .details_dataAnalysis {
     /* margin-top: 3rem; */
     padding: 4rem 0;
-    background-image: radial-gradient(rgb(201, 233, 18), rgb(50, 90, 105));
+    background-image: radial-gradient(rgb(181, 207, 34), rgb(50, 90, 105));
     font-weight: bolder;
 }
 
@@ -455,6 +456,7 @@ button {
 
     .input_startForFree {
         margin-bottom: 10px;
+        border: solid 1px red;
     }
 
 

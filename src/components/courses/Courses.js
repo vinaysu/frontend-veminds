@@ -108,10 +108,10 @@ function Courses() {
                   value={fullName}
                   inputRef={fullNameRef}
                   onChange={handleFullNameChange}
-                  className={styles.input_startForFree}
+                  className={styles.input_startForFree} // Keep your className here
                   label="Full Name"
                   variant="outlined"
-                  placeholder='Enter the FullName'
+                  placeholder="Enter the FullName"
                   fullWidth
                   InputProps={{
                     startAdornment: (
@@ -121,19 +121,36 @@ function Courses() {
                         </Avatar>
                       </InputAdornment>
                     ),
+                    style: {
+                      borderColor: 'white',
+                      marginBottom: '30px'// This applies the border color to the input field
+                    },
                   }}
-                  style={{ marginBottom: '20px' }}
+                  sx={{
+                    '& .MuiOutlinedInput-root': {
+                      '& fieldset': {
+                        borderColor: '#3BE1E4', // This sets the initial border color
+                      },
+                      '&:hover fieldset': {
+                        borderColor: 'yellow', // This sets the hover state border color
+                      },
+                      '&.Mui-focused fieldset': {
+                        borderColor: 'green', // This sets the focused border color
+                      },
+                    },
+                  }}
                 />
+
 
 
                 <TextField
                   value={mobile}
                   inputRef={mobileRef}
                   onChange={handleMobileChange}
-                  className={styles.input_startForFree}
+                  className={styles.input_startForFree} // Keep your custom class if needed
                   label="Mobile Number"
                   variant="outlined"
-                  placeholder='Enter the WhatsApp Number'
+                  placeholder="Enter the WhatsApp Number"
                   fullWidth
                   InputProps={{
                     startAdornment: (
@@ -141,8 +158,26 @@ function Courses() {
                         +91
                       </InputAdornment>
                     ),
+                    style: {
+                      borderColor: 'red',
+                      marginBottom: '30px' // This applies the border color to the input field
+                    },
+                  }}
+                  sx={{
+                    '& .MuiOutlinedInput-root': {
+                      '& fieldset': {
+                        borderColor: '#3BE1E4', // Initial border color
+                      },
+                      '&:hover fieldset': {
+                        borderColor: 'yellow', // Hover border color
+                      },
+                      '&.Mui-focused fieldset': {
+                        borderColor: 'green', // Focused border color
+                      },
+                    },
                   }}
                 />
+
                 <div className={styles.buttonContainer_StartForFree} >
                   <button onClick={handleClick} className={` btn btn-light btn-lg w-100 ${styles.button_startForFree}`} >Start For Free</button>
 
@@ -256,13 +291,13 @@ function Courses() {
 
             <div className={styles.buttonAndArrow}>
               <p className={styles.upskill} >Up skill on the most in demand skills in the market</p>
-              <div className={styles.technologyList}>
+              {/* <div className={styles.technologyList}>
                 <span className={styles.technology}>JavaScript</span>
                 <span className={styles.technology}>React.js</span>
                 <span className={styles.technology}>Node.js</span>
                 <span className={styles.technology}>MongoDB</span>
                 <span className={styles.technology}>Express.js</span>
-              </div>
+              </div> */}
               <KeyboardArrowUpIcon className={styles.upArrow}></KeyboardArrowUpIcon>
               <a href='#startForFree' ><button className="btn btn-primary btn-lg">Apply Now</button> </a>
             </div>
