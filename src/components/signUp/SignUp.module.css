@@ -20,6 +20,9 @@
   text-align: center;
 
 }
+.signupContainer h2{
+color: #0C7B86;
+}
 
 .signupForm {
   display: flex;
