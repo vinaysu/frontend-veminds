@@ -352,7 +352,7 @@ function Courses() {
                   <AvTimerIcon />
                   <span>Duration:</span>
                 </div>
-                <h6>6 Months</h6>
+                <h6>4 Months</h6>
               </div>
             </div>
 

@@ -100,7 +100,7 @@
 }
 
 .title_mern {
-    color: rgb(255, 0, 149);
+    color: red;
 }
 
 .payAfterPlacement,
@@ -232,7 +232,7 @@ h6 {
 .details_fullStack {
     /* margin-top: 3rem; */
     padding: 4rem 0;
-    background-image: radial-gradient(rgb(148, 93, 93), rgb(231, 217, 204));
+    background-image: radial-gradient(rgb(141, 132, 132), rgb(41, 40, 39));
 
 }
 
