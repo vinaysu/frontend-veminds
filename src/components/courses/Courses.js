@@ -80,9 +80,9 @@ function Courses() {
 
       if (data.success) {
         console.log(data.message);
-        alert('Successfully applied');
         setFullName(''); // Clear full name field
         setMobile(''); // Clear mobile field
+        alert('Successfully applied');
       } else {
         console.error(data.message);
         alert('Not successfully applied');
