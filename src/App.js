@@ -9,6 +9,7 @@ import Explore from './components/explore/Explore';
 import Login from './components/login/Login';
 import SignUp from './components/signUp/SignUp';
 import Footer from './components/footer/Footer';
+import Payment from './components/payment/Payment';
 
 
 
@@ -24,6 +25,8 @@ function App() {
         <Route path='/explore' element={<Explore ></Explore>} />
         <Route path='/login' element={<Login ></Login>} />
         <Route path='/signUp' element={<SignUp ></SignUp>} />
+        <Route path='/paymentSection' element={<Payment ></Payment>} />
+        
 
       </Routes>
       <Footer />

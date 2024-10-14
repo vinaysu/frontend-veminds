@@ -9,6 +9,7 @@ import SchoolIcon from '@mui/icons-material/School';
 import AvTimerIcon from '@mui/icons-material/AvTimer';
 import BusinessCenterIcon from '@mui/icons-material/BusinessCenter';
 import HandshakeIcon from '@mui/icons-material/Handshake';
+import { Link, useLocation } from 'react-router-dom';
 
 
 function Courses() {
@@ -104,6 +105,11 @@ function Courses() {
             <p className={styles.text} >
               Curriculum designed and taught by Alumni from IITs & Leading Tech Companies.
             </p>
+
+            <Link to={'/paymentSection'} className={`${styles.paymentButton} btn btn-primary`}>
+              <span>Pay and Enroll Now</span>
+            </Link>
+
 
           </div>
           <div id='startForFree' className={styles.right_fullstack} >

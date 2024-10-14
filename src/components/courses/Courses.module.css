@@ -489,3 +489,49 @@ button {
     border-radius: 1em;
     box-shadow: #202020 10px 10px;
 }
+
+.paymentButton {
+    position: relative;
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    background: linear-gradient(to right, #007bff, #65b300);
+    color: white;
+    cursor: pointer;
+    transition: color 0.3s ease, background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    overflow: hidden;
+}
+
+.paymentButton::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background-color: red;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.4s ease-in-out;
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.paymentButton:hover {
+    color: #fff;
+    border: 2px solid red;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.7);
+    transform: scale(1.05);
+}
+
+.paymentButton:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.paymentButton span {
+    position: relative;
+    z-index: 1;
+}
