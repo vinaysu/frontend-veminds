@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styles from './Payment.module.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Payment() {
     const [formData, setFormData] = useState({
