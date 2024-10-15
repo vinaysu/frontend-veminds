@@ -144,3 +144,16 @@
   margin: 5rem;
   padding: 0 2rem;
 }
+
+.footerBottom span{
+  /* text-decoration: underline; */
+  margin: 20px;
+  color: #3BE1E4;
+  cursor: pointer;
+}
+
+.footerBottom span:hover{
+  text-decoration: underline;
+  color: rgb(170, 204, 17);
+ 
+}

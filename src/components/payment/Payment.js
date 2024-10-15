@@ -2,14 +2,17 @@ import React, { useState } from 'react';
 import styles from './Payment.module.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+
 function Payment() {
-    const [formData, setFormData] = useState({
+
+    const initialFormData = {
         fullName: '',
         email: '',
         amount: '',
         mobile: '',
         termsAccepted: false,
-    });
+    };
+    const [formData, setFormData] = useState(initialFormData);
 
     const [errors, setErrors] = useState({});
     const [isFormValid, setIsFormValid] = useState(false);
@@ -69,8 +72,13 @@ function Payment() {
     const handleSubmit = (e) => {
         e.preventDefault();
         if (isFormValid) {
+            alert('Payment Gateway coming soon')
             // Handle payment logic
+
             console.log('Payment submitted', formData);
+
+            // Clear the form after submission
+            setFormData(initialFormData);
         }
     };
 
