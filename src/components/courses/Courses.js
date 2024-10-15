@@ -100,7 +100,7 @@ function Courses() {
         <div className={styles.fullStack} >
           <div className={styles.left_fullStack} >
             <h1 className={styles.caption} >
-              Launch your career with <br />  our <span className={styles.font_color} > Full Stack Development & Data Science <br />   Course </span> and Pay after <br /> Placement
+              Launch your career with <br />  our <span className={styles.font_color} > Full Stack Development <br /> & Data Science Courses </span> <br /> and Pay after  Placement
             </h1>
             <p className={styles.text} >
               Curriculum designed and taught by Alumni from IITs & Leading Tech Companies.
