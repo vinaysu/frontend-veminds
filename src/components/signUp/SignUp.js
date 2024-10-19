@@ -19,26 +19,28 @@ function SignUp() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Send data to the backend to save in MongoDB
-    try {
-      const response = await fetch('https://backend-veminds.onrender.com/register', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
+    alert('Courses registration will begin after the payment gateway is added in the website.')
 
-      const data = await response.json();
-      if (data.success) {
-        alert('Registration successful!');
-      } else {
-        alert('Failed to register user');
-      }
-    } catch (error) {
-      console.error('Error:', error);
-      alert('An error occurred during registration');
-    }
+    // Send data to the backend to save in MongoDB
+    // try {
+    //   const response = await fetch('https://backend-veminds.onrender.com/register', {
+    //     method: 'POST',
+    //     headers: {
+    //       'Content-Type': 'application/json',
+    //     },
+    //     body: JSON.stringify(formData),
+    //   });
+
+    //   const data = await response.json();
+    //   if (data.success) {
+    //     alert('Registration successful!');
+    //   } else {
+    //     alert('Failed to register user');
+    //   }
+    // } catch (error) {
+    //   console.error('Error:', error);
+    //   alert('An error occurred during registration');
+    // }
 
     // Reset Form
     setFormData({
