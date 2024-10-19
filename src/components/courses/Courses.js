@@ -272,6 +272,7 @@ function Courses() {
             </div>
 
           </div>
+          <p className={styles.note} >Please note that due to the service-based nature of our business, our pricing is not fixed and may vary depending on the specific requirements of each client, project timelines, and various other factors. To obtain the exact pricing for your project, we kindly ask you to contact us before making any payment. Our service pricing ranges from INR.99 to 10Lakhs.</p>
         </div>
         <div className={styles.details_dataScience} >
           <div className={`${styles.topContainer}`}>
@@ -339,6 +340,7 @@ function Courses() {
             </div>
 
           </div>
+          <p className={styles.note} >Please note that due to the service-based nature of our business, our pricing is not fixed and may vary depending on the specific requirements of each client, project timelines, and various other factors. To obtain the exact pricing for your project, we kindly ask you to contact us before making any payment. Our service pricing ranges from INR.99 to 10Lakhs.</p>
         </div>
         <div className={styles.details_dataAnalysis} >
           <div className={`${styles.topContainer}`}>
@@ -406,6 +408,13 @@ function Courses() {
             </div>
 
           </div>
+          <p className={styles.note} >
+            Please note that due to the service-based nature of our business,
+            our pricing is not fixed and may vary depending on the specific requirements of
+            each client, project timelines, and various other factors. To obtain the exact pricing
+            for your project, we kindly ask you to contact us before making any payment.
+            Our service pricing ranges from INR.99 to 10Lakhs.
+            </p>
         </div>
       </div>
     </div>

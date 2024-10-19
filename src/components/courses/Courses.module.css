@@ -537,3 +537,14 @@ button {
     position: relative;
     z-index: 1;
 }
+
+.note{
+    color: rgb(228, 11, 65);
+    font-weight: 100;
+    text-align: center ;
+    padding: 0 5%;
+    border: solid 1px white;
+    background-color: black;
+   
+    
+}

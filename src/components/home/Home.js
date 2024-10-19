@@ -169,9 +169,6 @@ function Home() {
 
 
 
-
-
-
   return (
     <div className={`${styles.home}`}>
       <div

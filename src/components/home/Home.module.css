@@ -35,6 +35,21 @@
   /* Maintain the aspect ratio and fill the container */
 }
 
+.carousel-inner {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-item {
+  width: 100%;
+  flex: 0 0 100%;
+  /* Ensures each slide takes up 100% of the width */
+  transition: transform 0.5s ease-in-out;
+  /* Smooth transitions */
+}
+
+
 .carouselText {
   position: absolute;
   top: 50%;
