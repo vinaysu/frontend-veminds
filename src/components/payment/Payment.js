@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styles from './Payment.module.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import axios from 'axios'
 
 
 function Payment() {
@@ -69,13 +70,37 @@ function Payment() {
         setIsFormValid(valid);
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        if (isFormValid) {
-            alert('Payment Gateway coming soon')
-            // Handle payment logic
+        alert("handle submit triggered")
 
-            console.log('Payment submitted', formData);
+        if (isFormValid) {
+            alert("form validated")
+            // Payment submission logic
+
+            const data = {
+                name: formData.fullName,  // use fullName from the form
+                mobileNumber: formData.mobile,  // use mobile from the form
+                amount: formData.amount,  // use amount from the form
+            };
+
+            try {
+                alert("alert in try")
+                const response = await axios.post('https://veminds.com/order', data);
+
+                if (response.data.url) {
+                    alert("alert in response.data.url ")
+                    window.location.href = response.data.url;  // Redirect to payment URL
+                } else {
+                    alert("alert ou url")
+                }
+
+            } catch (error) {
+                alert("alert in catch")
+                console.error("Error in payment:", error);
+            }
+
+
 
             // Clear the form after submission
             setFormData(initialFormData);
